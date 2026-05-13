@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Maaind - The most accurate psychophysiology platform on Earth</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="components.jsx"></script>
+<script type="text/babel" src="sections.jsx"></script>
+<script type="text/babel" src="sections-2.jsx"></script>
+<script type="text/babel" src="sections-3.jsx"></script>
+
+<script type="text/babel">
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "accent": "#7adcb8",
+  "showGrid": true,
+  "tone": "emerald"
+}/*EDITMODE-END*/;
+
+const ACCENTS = {
+  emerald: { c: 'oklch(82% 0.18 165)', c2: 'oklch(78% 0.18 178)', g: 'oklch(82% 0.18 165 / 0.18)' },
+  cyan:    { c: 'oklch(80% 0.16 220)', c2: 'oklch(78% 0.18 200)', g: 'oklch(80% 0.16 220 / 0.20)' },
+  amber:   { c: 'oklch(82% 0.16 75)',  c2: 'oklch(78% 0.18 60)',  g: 'oklch(82% 0.16 75 / 0.20)' },
+  violet:  { c: 'oklch(74% 0.18 290)', c2: 'oklch(72% 0.20 310)', g: 'oklch(74% 0.18 290 / 0.22)' },
+};
+
+const App = () => {
+  const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
+
+  React.useEffect(() => {
+    const a = ACCENTS[tweaks.tone] || ACCENTS.emerald;
+    document.documentElement.style.setProperty('--accent', a.c);
+    document.documentElement.style.setProperty('--accent-2', a.c2);
+    document.documentElement.style.setProperty('--accent-glow', a.g);
+  }, [tweaks.tone]);
+
+  return (
+    <>
+      <Nav />
+      <main>
+        <Hero />
+        <Stats />
+        <Capabilities />
+        <Fusion />
+        <Deploy />
+        <Automotive />
+        <Wearables />
+        <Security />
+        <Docs />
+        <CTA />
+      </main>
+      <Footer />
+
+      <TweaksPanel title="Tweaks">
+        <TweakSection title="Accent">
+          <TweakRadio
+            label="Tone"
+            value={tweaks.tone}
+            onChange={v => setTweak('tone', v)}
+            options={[
+              { value: 'emerald', label: 'Emerald' },
+              { value: 'cyan', label: 'Cyan' },
+              { value: 'amber', label: 'Amber' },
+              { value: 'violet', label: 'Violet' },
+            ]}
+          />
+        </TweakSection>
+      </TweaksPanel>
+    </>
+  );
+};
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
