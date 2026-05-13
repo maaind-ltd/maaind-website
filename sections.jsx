@@ -1,11 +1,18 @@
 // Page sections for Maaind website
 
 const THEMES = [
-  { id: 'obsidian', label: 'Obsidian', sub: 'Default · emerald on ink', bg: '#0a0c0b', color: 'oklch(82% 0.18 165)' },
-  { id: 'carbon',   label: 'Carbon',   sub: 'Cobalt on navy',           bg: '#04071a', color: 'oklch(72% 0.20 245)' },
-  { id: 'plasma',   label: 'Plasma',   sub: 'Magenta on aubergine',     bg: '#0d0420', color: 'oklch(76% 0.22 320)' },
-  { id: 'graphite', label: 'Graphite', sub: 'Amber on coffee',          bg: '#120c06', color: 'oklch(80% 0.17 70)'  },
-  { id: 'parchment',label: 'Parchment',sub: 'Editorial light',          bg: '#f5f1e8', color: 'oklch(50% 0.16 30)'  },
+  { id: 'obsidian', label: 'Obsidian', sub: 'Default · emerald on ink',  bg: '#0a0c0b', color: 'oklch(82% 0.18 165)', mode: 'dark'  },
+  { id: 'atrium',   label: 'Atrium',   sub: 'Brand · maaind teal on bone', bg: '#fafaf5', color: 'oklch(56% 0.12 178)', mode: 'light' },
+  { id: 'mist',     label: 'Mist',     sub: 'Brand · teal on linen-grey', bg: '#eef0ec', color: 'oklch(54% 0.13 175)', mode: 'light' },
+  { id: 'sage',     label: 'Sage',     sub: 'Warm · moss on putty',      bg: '#ece8dc', color: 'oklch(42% 0.10 145)', mode: 'light' },
+  { id: 'bloom',    label: 'Bloom',    sub: 'Warm · clay on blush',      bg: '#f5ebe0', color: 'oklch(52% 0.13 28)',  mode: 'light' },
+  { id: 'linen',    label: 'Linen',    sub: 'Warm · sage on cream',      bg: '#f1ece0', color: 'oklch(48% 0.10 150)', mode: 'light' },
+  { id: 'parchment',label: 'Parchment',sub: 'Editorial light',           bg: '#f5f1e8', color: 'oklch(50% 0.16 30)',  mode: 'light' },
+  { id: 'dusk',     label: 'Dusk',     sub: 'Warm · peach on plum',      bg: '#1a1018', color: 'oklch(82% 0.12 55)',  mode: 'dark'  },
+  { id: 'clay',     label: 'Clay',     sub: 'Warm · terracotta on earth',bg: '#1a120c', color: 'oklch(75% 0.14 40)',  mode: 'dark'  },
+  { id: 'graphite', label: 'Graphite', sub: 'Amber on coffee',           bg: '#120c06', color: 'oklch(80% 0.17 70)',  mode: 'dark'  },
+  { id: 'carbon',   label: 'Carbon',   sub: 'Cobalt on navy',            bg: '#04071a', color: 'oklch(72% 0.20 245)', mode: 'dark'  },
+  { id: 'plasma',   label: 'Plasma',   sub: 'Magenta on aubergine',      bg: '#0d0420', color: 'oklch(76% 0.22 320)', mode: 'dark'  },
 ];
 
 const ThemeSwitch = () => {
@@ -17,6 +24,8 @@ const ThemeSwitch = () => {
 
   React.useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
+    const t = THEMES.find(x => x.id === theme);
+    document.documentElement.setAttribute('data-mode', (t && t.mode) || 'dark');
     try { localStorage.setItem('maaind.theme', theme); } catch (e) {}
   }, [theme]);
 
@@ -79,10 +88,11 @@ const Nav = () => {
           <ThemeSwitch />
         </div>
         <div className="nav-links">
+          <a href="#why-integrate">Why</a>
           <a href="#platform">Platform</a>
-          <a href="#fusion">Fusion</a>
-          <a href="#deploy">Deploy</a>
           <a href="#automotive">Automotive</a>
+          <a href="#voice-ai">Voice AI</a>
+          <a href="#health">Health</a>
           <a href="#security">Security</a>
           <a href="#docs">Docs</a>
         </div>
@@ -197,9 +207,9 @@ const Hero = () => (
       </div>
 
       <div className="hero-logos">
-        <Mono className="dim">Selected partners, collaborators &amp; research links</Mono>
+        <Mono className="dim">Selected customers, partners &amp; research links</Mono>
         <div className="logos-row">
-          {['NVIDIA', 'INTEL', 'QUALCOMM', 'UCL', 'TU/E'].map(l => (
+          {['MICROSOFT', 'PORSCHE', 'NVIDIA', 'INTEL', 'ACHMEA', 'DSTL', 'UCL'].map(l => (
             <span key={l} className="logo-pill">{l}</span>
           ))}
         </div>

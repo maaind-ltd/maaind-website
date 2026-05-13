@@ -13,15 +13,24 @@ const Automotive = () => (
             <div className="cabin-grid" />
             <div className="cabin-occupants">
               {[
-                { x: 22, y: 38, label: 'driver', state: 'attentive', stress: 0.18 },
-                { x: 64, y: 38, label: 'passenger', state: 'relaxed', stress: 0.12 },
-                { x: 22, y: 70, label: 'rear_L', state: 'drowsy', stress: 0.42 },
-                { x: 64, y: 70, label: 'rear_R', state: 'engaged', stress: 0.22 },
+                { x: 22, y: 38, label: 'driver',    state: 'attentive', stress: 0.18, img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=240&h=240&fit=crop&crop=faces', name: 'M. Andersen' },
+                { x: 64, y: 38, label: 'passenger', state: 'relaxed',   stress: 0.12, img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=240&h=240&fit=crop&crop=faces', name: 'A. Petrova' },
+                { x: 22, y: 70, label: 'rear_L',    state: 'drowsy',    stress: 0.42, img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=240&h=240&fit=crop&crop=faces', name: 'D. Okafor' },
+                { x: 64, y: 70, label: 'rear_R',    state: 'engaged',   stress: 0.22, img: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=240&h=240&fit=crop&crop=faces', name: 'S. Tanaka' },
               ].map((o, i) => (
                 <div key={i} className="occupant" style={{ left: `${o.x}%`, top: `${o.y}%` }}>
-                  <div className="occ-bbox" />
+                  <div className="occ-bbox">
+                    <div className="occ-face">
+                      <img src={o.img} alt="" loading="lazy" referrerPolicy="no-referrer" />
+                    </div>
+                    <span className="occ-landmark" style={{ top: '40%', left: '38%' }} />
+                    <span className="occ-landmark" style={{ top: '40%', left: '62%' }} />
+                    <span className="occ-landmark" style={{ top: '55%', left: '50%' }} />
+                    <span className="occ-landmark" style={{ top: '70%', left: '42%' }} />
+                    <span className="occ-landmark" style={{ top: '70%', left: '58%' }} />
+                  </div>
                   <div className="occ-label">
-                    <Mono>{o.label}</Mono>
+                    <Mono>{o.label} · {o.name}</Mono>
                     <Mono className="dim">{o.state}</Mono>
                     <div className="mini-bar slim"><span style={{width: `${o.stress*100}%`}}/></div>
                   </div>
@@ -72,7 +81,7 @@ const Wearables = () => {
   return (
     <section className="section" id="wearables">
       <div className="container">
-        <SectionHeader idx={5} kicker="INTEGRATIONS"
+        <SectionHeader idx={7} kicker="INTEGRATIONS"
           title={<>Every wearable<br /><span className="grad-text">your users own.</span></>}
           sub="Drop-in connectors for major COTS devices. Streams normalised to a single, modality-agnostic schema." />
         <div className="wearables-grid">
@@ -106,7 +115,7 @@ const Security = () => {
   return (
     <section className="section section-alt" id="security">
       <div className="container">
-        <SectionHeader idx={6} kicker="TRUST & SECURITY"
+        <SectionHeader idx={8} kicker="TRUST & SECURITY"
           title={<>Privacy by design.<br /><span className="grad-text">Compliance by default.</span></>}
           sub="Audit logs, key rotation, on-device feature extraction, zero raw-data egress, full data residency control." />
         <div className="sec-grid">
@@ -308,7 +317,7 @@ const DocsTabs = () => {
 const Docs = () => (
   <section className="section" id="docs">
     <div className="container">
-      <SectionHeader idx={7} kicker="DEVELOPER EXPERIENCE"
+      <SectionHeader idx={9} kicker="DEVELOPER EXPERIENCE"
         title={<>Developer experience<br /><span className="grad-text">we’d want to use ourselves.</span></>}
         sub={<>Python and TypeScript SDKs today; Swift, Kotlin, Java, Rust and C++ on the roadmap. We&rsquo;re building out comprehensive product documentation - quickstarts, API reference and recipes. The snippets below are <strong>indicative</strong> only, to give you a feel for the API. <a href="https://ea1wg59mqn4.typeform.com/to/iVv585ne" target="_blank" rel="noopener" className="link-accent">Get in touch</a> for current docs and a live demo.</>} />
 
@@ -328,24 +337,6 @@ const BENEFITS = [
 const CTA = () => (
   <section className="section section-cta">
     <div className="container">
-      <div className="cta-benefits">
-        <div className="cta-benefits-head">
-          <Mono className="dim">⏵ WHY INTEGRATE MAAIND</Mono>
-          <h2 className="cta-benefits-title">
-            One integration. <span className="grad-text">Five compounding benefits.</span>
-          </h2>
-        </div>
-        <div className="benefit-grid">
-          {BENEFITS.map(b => (
-            <div key={b.n} className="benefit-card">
-              <Mono className="dim">{b.n}</Mono>
-              <div className="benefit-t">{b.t}</div>
-              <div className="benefit-d">{b.d}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
       <div className="cta-card">
         <div className="cta-grid-bg" />
         <Mono className="dim">⏵ READY WHEN YOU ARE</Mono>
