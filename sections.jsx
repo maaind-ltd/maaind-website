@@ -116,25 +116,9 @@ const ThemeSwitch = () => {
     );
   };
 
-  return (
-    <div className="theme-switch" ref={ref}>
-      <button type="button" className="theme-switch-btn" onClick={() => setOpen(o => !o)} aria-haspopup="listbox" aria-expanded={open}>
-        <span className="theme-swatch-dual" style={{ background: aSw.bg }}>
-          <span className="theme-swatch-accent" style={{ background: aSw.accent }} />
-        </span>
-        <span>{active.label}</span>
-        <span className="theme-caret">▾</span>
-      </button>
-      {open && (
-        <div className="theme-menu" role="listbox">
-          <span className="theme-group-label">Combinations</span>
-          {COMBOS.map(renderItem)}
-          <span className="theme-group-label">Single theme</span>
-          {THEMES.map(renderItem)}
-        </div>
-      )}
-    </div>
-  );
+  // Theme dropdown intentionally hidden: this component still runs the effect
+  // above that applies the per-section "Signature" theming on load.
+  return null;
 };
 
 const Nav = () => {
