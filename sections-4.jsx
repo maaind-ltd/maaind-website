@@ -6,9 +6,9 @@ const BENEFITS_X = [
   {
     n: '01',
     t: 'Affective AI, out of the box',
-    d: 'A single API for emotion, stress, focus, fatigue, drowsiness and engagement - calibrated, continuous, deployment-ready.',
+    d: 'A single API for emotion, stress, focus, fatigue, drowsiness and engagement. Calibrated, continuous and ready to ship.',
     eyebrow: 'PLATFORM',
-    long: 'Drop one REST + SDK surface into your stack and you have a continuous, calibrated read of human state — emotion, arousal, valence, stress, focus, fatigue, drowsiness, engagement. Multi-modal under the hood, model-selection done for you, ≤100 ms on supported architectures. No labelled-data project to start.',
+    long: 'Drop one REST and SDK surface into your stack and you have a continuous, calibrated read of human state: emotion, arousal, valence, stress, focus, fatigue, drowsiness and engagement. It is multimodal under the hood, picks its own models, and answers in 100 ms or less on supported hardware. No labelled-data project before you can start.',
     points: [
       ['8 calibrated outputs', 'arousal, valence, stress, focus, fatigue, drowsiness, engagement, emotion'],
       ['One model, one API', 'identical surface across cloud, on-prem and on-device'],
@@ -18,9 +18,9 @@ const BENEFITS_X = [
   {
     n: '02',
     t: 'Smarter voice AI & agents',
-    d: 'Give your assistant, IVR, copilot or LLM agent a sense of how the user actually feels - and let it respond accordingly.',
+    d: 'Give your assistant, IVR, copilot or LLM agent a sense of how the user actually feels, and let it respond accordingly.',
     eyebrow: 'AGENTS · VOICE AI',
-    long: 'Most LLMs and voice stacks are blind to how the user is actually feeling. Maaind layers a real-time read of arousal, valence, stress and frustration on top of any agent — voice copilot, IVR, in-cabin assistant, customer-care bot. Agents that hear tone, not just transcripts, and route or respond accordingly.',
+    long: 'Most LLMs and voice stacks are deaf to how the person actually feels. Maaind layers a real-time read of arousal, valence, stress and frustration over any agent, whether that is a voice copilot, an IVR, an in-cabin assistant or a customer-care bot. Agents that hear tone, not just transcripts, and answer accordingly.',
     points: [
       ['Tone-aware turn-taking', 'stop interrupting the frustrated caller, slow down for the overloaded one'],
       ['Sentiment-routed IVR', 'escalate angry or distressed users to a human, automatically'],
@@ -32,9 +32,9 @@ const BENEFITS_X = [
     t: 'Smarter, personalised environments',
     d: 'Adapt vehicles, devices, operator stations and ambient systems to the human in the loop, in real time.',
     eyebrow: 'AMBIENT · AUTOMOTIVE',
-    long: 'Cars, devices, operator stations, lighting, audio — when the system knows whether the user is calm or overwhelmed, focused or distracted, it can adapt. Ambient temperature, music tempo, suggestion timing, content density, HUD complexity. The same model runs in the cloud or quantised down to an automotive SOC.',
+    long: 'Cars, devices, operator stations, lighting and audio can all adapt once the system knows whether the user is calm or overwhelmed, focused or distracted. Ambient temperature, music tempo, suggestion timing, content density, HUD complexity. The same model runs in the cloud or quantised down to an automotive SOC.',
     points: [
-      ['Per-occupant adaptation', 'up to 8 simultaneous occupants, per-seat state and policy'],
+      ['Per-occupant adaptation', 'up to four occupants at once, each with their own state and policy'],
       ['HVAC · audio · lighting · HUD', 'a control signal for any ambient system in the cabin or room'],
       ['Cloud or on-SOC', 'INT8 / INT4 quantised across automotive, mobile and edge silicon'],
     ],
@@ -42,9 +42,9 @@ const BENEFITS_X = [
   {
     n: '04',
     t: 'Health, wellbeing & performance',
-    d: 'Support individuals across stress, recovery, focus and resilience - clinically-grounded signals, consumer-grade UX.',
+    d: 'Support people through stress, recovery, focus and resilience. Clinically-grounded signals, with a consumer-grade experience on top.',
     eyebrow: 'HEALTH · DTx',
-    long: 'Clinically-grounded signals — HRV, respiration, voice biomarkers, sleep architecture, daily stress load — wrapped in consumer-friendly outputs. Used for mental-wellbeing apps, recovery coaches, occupational health programmes and digital therapeutics with regulated workflows.',
+    long: 'Clinically-grounded signals, including HRV, respiration, voice biomarkers, sleep architecture and daily stress load, wrapped in outputs an everyday user can actually understand. It powers mental-wellbeing apps, recovery coaches, occupational-health programmes and digital therapeutics with regulated workflows.',
     points: [
       ['Stress, recovery, readiness', 'continuous daily indices that work alongside the wearables your users already own'],
       ['Clinical signals, consumer UX', 'HRV / RMSSD / SDNN / EDA / respiration normalised to one schema'],
@@ -54,9 +54,9 @@ const BENEFITS_X = [
   {
     n: '05',
     t: 'Understand your users, deeply',
-    d: 'A continuous read of emotion, psychology and state - for product analytics, research, safety and personalisation.',
+    d: 'A continuous read of emotion, psychology and state, for product analytics, research, safety and personalisation.',
     eyebrow: 'INSIGHTS · RESEARCH',
-    long: 'A continuous, multi-modal read of what your users actually feel as they use your product. Not post-hoc surveys, not sentiment-guessing on text — a calibrated, time-aligned signal. For product analytics teams, user-research labs, safety teams and personalisation engines.',
+    long: 'A continuous, multimodal read of what your users actually feel as they use your product. Not post-hoc surveys, not sentiment-guessing on text, but a calibrated, time-aligned signal. Built for product analytics teams, user-research labs, safety teams and personalisation engines.',
     points: [
       ['Time-aligned with telemetry', 'fuse psychological state with your existing product events'],
       ['Cohorts & segments', 'per-user baselines so deltas are meaningful, not noise'],
@@ -95,7 +95,7 @@ const WhyIntegrate = () => {
             <span className="grad-text">Five compounding benefits.</span>
           </h2>
           <p className="why-sub">
-            Tap a card to expand. The same fusion model powers every benefit — adopt one, the others come for free.
+            Tap any card to open it up. The same fusion model sits behind every one of these, so once you adopt one, the rest come almost for free.
           </p>
         </div>
         <div className="benefit-grid-x">
@@ -174,8 +174,8 @@ const VoiceAI = () => {
     <section className="section section-alt" id="voice-ai">
       <div className="container">
         <SectionHeader idx={5} kicker="USE CASE · AGENTS"
-          title={<>Agents that <span className="grad-text">hear how you feel</span>.</>}
-          sub={<>Most voice AIs and LLM agents are blind to tone. Maaind feeds real-time emotion, stress, valence and engagement into your agent loop &mdash; for <strong>IVR &amp; contact centres</strong>, <strong>voice copilots</strong> and <strong>LLM agents</strong>. Cloud or on-device, same API.</>} />
+          title={<>Agents that <span className="grad-text">hear how you feel</span>, not just what you said.</>}
+          sub={<>Most voice AIs and LLM agents only get the words. Maaind hands them the rest: tone of voice and facial signals, real-time emotion, stress and engagement, and where attention actually is. The agent can tell how someone feels and what they really mean. Built for <strong>IVR and contact centres</strong>, <strong>voice copilots</strong> and <strong>LLM agents</strong>, in the cloud or on-device, on one API.</>} />
         <div className="voice-grid">
           <div className="voice-panel">
             <div className="voice-grid-bg" />
@@ -197,7 +197,7 @@ const VoiceAI = () => {
                   </div>
                   <div className="vp-side-meta">
                     <span className="vp-name">Caller · E. Vasquez</span>
-                    <Mono className="dim">en-GB · 16 kHz</Mono>
+                    <Mono className="dim">en-GB · live</Mono>
                   </div>
                 </div>
                 <div className="vp-msgs">
@@ -233,7 +233,7 @@ const VoiceAI = () => {
                 </div>
                 <div className="vp-msgs">
                   <div className="vp-msg agent">
-                    "I can hear this has been really frustrating &mdash; let me take this off your plate. Stay on the line while I check directly."
+                    "I can hear this has been really frustrating. Let me take it off your plate, stay on the line while I check directly."
                     <div className="vp-msg-meta">
                       <span className="chip accent">empathy mode</span>
                       <span className="chip">cadence −20%</span>
@@ -241,7 +241,7 @@ const VoiceAI = () => {
                     </div>
                   </div>
                   <div className="vp-msg agent">
-                    "While I look &mdash; would it be easier if I called you back in 5 minutes instead?"
+                    "While I look into it, would it be easier if I called you back in five minutes?"
                     <div className="vp-msg-meta">
                       <span className="chip">offer · async</span>
                       <span className="chip">route · escalate(L2)</span>
@@ -256,7 +256,7 @@ const VoiceAI = () => {
             <div className="usecase-feature">
               <Mono className="dim">IVR &amp; CONTACT CENTRE</Mono>
               <h4>Sentiment-routed support</h4>
-              <p>Detect frustration, distress or churn-risk in the first 10 seconds &mdash; route to the right agent, the right script, the right tier. Cuts average handle time and lifts CSAT.</p>
+              <p>Detect frustration, distress or churn-risk in the first 10 seconds, then route to the right agent, script and tier. It cuts average handle time and lifts CSAT.</p>
             </div>
             <div className="usecase-feature">
               <Mono className="dim">VOICE COPILOTS</Mono>
@@ -309,7 +309,7 @@ const Health = () => {
       <div className="container">
         <SectionHeader idx={6} kicker="USE CASE · HEALTH &amp; WELLBEING"
           title={<>Clinical signals.<br /><span className="grad-text">Consumer-grade UX.</span></>}
-          sub={<>The platform supports <strong>mental wellbeing</strong>, <strong>recovery &amp; performance</strong>, <strong>occupational health</strong> and <strong>digital therapeutics</strong> &mdash; built on the wearables your users already own and the clinical signals our research stack already extracts.</>} />
+          sub={<>The platform supports <strong>mental wellbeing</strong>, <strong>recovery &amp; performance</strong>, <strong>occupational health</strong> and <strong>digital therapeutics</strong>, built on the wearables your users already own and the clinical signals our research stack already extracts.</>} />
 
         <div className="health-grid">
           <div className="health-panel">
@@ -372,7 +372,7 @@ const Health = () => {
             <div className="usecase-feature">
               <Mono className="dim">MENTAL WELLBEING</Mono>
               <h4>Stress &amp; burnout, before the crash</h4>
-              <p>Continuous daily stress load and recovery balance. Surface concerning trends days before users notice them themselves &mdash; for wellness apps, EAPs and occupational-health programmes.</p>
+              <p>Continuous daily stress load and recovery balance. Surface concerning trends days before users notice them themselves, for wellness apps, EAPs and occupational-health programmes.</p>
             </div>
             <div className="usecase-feature">
               <Mono className="dim">RECOVERY &amp; PERFORMANCE</Mono>
@@ -382,7 +382,7 @@ const Health = () => {
             <div className="usecase-feature">
               <Mono className="dim">DIGITAL THERAPEUTICS</Mono>
               <h4>DTx-grade signals, regulated workflows</h4>
-              <p>Clinically-grounded streams &mdash; HRV, EDA, respiration, voice biomarkers &mdash; with auditability, signed inference and data-residency controls for regulated deployments.</p>
+              <p>Clinically-grounded streams, including HRV, EDA, respiration and voice biomarkers, with auditability, signed inference and data-residency controls for regulated deployments.</p>
             </div>
           </div>
         </div>

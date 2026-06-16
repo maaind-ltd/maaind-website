@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Maaind - The most accurate psychophysiology platform on Earth</title>
+<title>Maaind · Multimodal psychophysiology, fused and deployable anywhere</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -38,51 +38,25 @@ const ACCENTS = {
 };
 
 const App = () => {
-  const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
-
-  React.useEffect(() => {
-    const a = ACCENTS[tweaks.tone] || ACCENTS.emerald;
-    document.documentElement.style.setProperty('--accent', a.c);
-    document.documentElement.style.setProperty('--accent-2', a.c2);
-    document.documentElement.style.setProperty('--accent-glow', a.g);
-  }, [tweaks.tone]);
-
   return (
     <>
       <Nav />
       <main>
-        <Hero />
-        <Stats />
-        <LogoStrip />
-        <WhyIntegrate />
-        <Capabilities />
-        <Fusion />
-        <Deploy />
-        <Automotive />
-        <VoiceAI />
-        <Health />
-        <Wearables />
-        <Security />
-        <Docs />
-        <CTA />
+        <div className="theme-zone"><Hero /></div>
+        <div className="theme-zone"><Stats /></div>
+        <div className="theme-zone"><WhyIntegrate /></div>
+        <div className="theme-zone"><Capabilities /></div>
+        <div className="theme-zone"><Fusion /></div>
+        <div className="theme-zone"><Deploy /></div>
+        <div className="theme-zone"><Automotive /></div>
+        <div className="theme-zone"><VoiceAI /></div>
+        <div className="theme-zone"><Health /></div>
+        <div className="theme-zone"><Wearables /></div>
+        <div className="theme-zone"><Security /></div>
+        <div className="theme-zone"><Docs /></div>
+        <div className="theme-zone"><CTA /></div>
       </main>
       <Footer />
-
-      <TweaksPanel title="Tweaks">
-        <TweakSection title="Accent">
-          <TweakRadio
-            label="Tone"
-            value={tweaks.tone}
-            onChange={v => setTweak('tone', v)}
-            options={[
-              { value: 'emerald', label: 'Emerald' },
-              { value: 'cyan', label: 'Cyan' },
-              { value: 'amber', label: 'Amber' },
-              { value: 'violet', label: 'Violet' },
-            ]}
-          />
-        </TweakSection>
-      </TweaksPanel>
     </>
   );
 };

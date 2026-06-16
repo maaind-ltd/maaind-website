@@ -5,7 +5,7 @@ const Automotive = () => (
     <div className="container">
       <SectionHeader idx={4} kicker="USE CASES"
         title={<>Wherever human state<br /><span className="grad-text">changes the outcome.</span></>}
-        sub={<>The platform is built for any setting that benefits from psychophysiology, personalisation and affective AI - <strong>automotive</strong> (DMS + OMS), <strong>defence</strong> and safety-critical operator monitoring, <strong>health and digital therapeutics</strong>, <strong>voice AIs and agents</strong>, <strong>insurance</strong>, and <strong>consumer wellbeing</strong>. Below is one worked example: <span className="accent-text">automotive cabin sensing</span>.</>} />
+        sub={<>We built the platform for any setting where knowing how a person is doing changes the outcome: <strong>automotive</strong> (DMS + OMS), <strong>defence</strong> and safety-critical operator monitoring, <strong>health and digital therapeutics</strong>, <strong>voice AIs and agents</strong>, <strong>insurance</strong>, and <strong>consumer wellbeing</strong>. It already runs in cabin programmes with leading automakers. Here is one worked example: <span className="accent-text">automotive cabin sensing</span>.</>} />
       <div className="auto-grid">
         <div className="auto-main">
           <div className="cabin-frame">
@@ -40,7 +40,7 @@ const Automotive = () => (
             <div className="cabin-hud">
               <div className="hud-item"><Mono className="dim">CABIN STATE</Mono><Mono>3 attentive · 1 drowsy</Mono></div>
               <div className="hud-item"><Mono className="dim">ACTION</Mono><Mono className="accent-text">→ rear ventilation +</Mono></div>
-              <div className="hud-item"><Mono className="dim">CHIP</Mono><Mono>SA8295P · 38ms</Mono></div>
+              <div className="hud-item"><Mono className="dim">CHIP</Mono><Mono>Jetson Orin · 38 ms</Mono></div>
             </div>
           </div>
         </div>
@@ -48,18 +48,18 @@ const Automotive = () => (
           <div className="auto-feature">
             <Mono className="dim">SAFETY</Mono>
             <h4>Driver monitoring (DMS)</h4>
-            <p>Drowsiness, distraction, gaze-off-road, hands-on-wheel, impairment, unresponsive driver - designed against Euro NCAP 2026 Driver Engagement protocols.</p>
+            <p>Drowsiness, microsleep, distraction, eyes-off-road, hands-near-wheel and the unresponsive-driver case. Built to the Euro NCAP 2026 driver-engagement protocol, using the timing thresholds it asks for.</p>
           </div>
           <div className="auto-feature">
             <Mono className="dim">COMFORT</Mono>
             <h4>Occupant wellbeing (OMS)</h4>
-            <p>Per-seat stress, mood, engagement. Drives HVAC, audio, ambient lighting.</p>
+            <p>Per-seat stress, mood and engagement, enough for the car to tune climate, audio and ambient lighting to whoever is actually sitting there.</p>
             <p style={{marginTop:8,fontSize:12,color:'var(--fg-3)'}}>Per-seat OMS requires cabin camera + seat-PPG / capacitive-sensor inputs at integration.</p>
           </div>
           <div className="auto-feature">
             <Mono className="dim">STANDARDS POSTURE</Mono>
             <h4>Aligned with automotive safety &amp; cyber standards</h4>
-            <p>The platform is built and documented with the major automotive standards in mind &mdash; functional safety, cyber-security and software-update processes for cars. We share our internal documentation with OEM and Tier&nbsp;1 procurement teams on request.</p>
+            <p>The platform is built and documented with the major automotive standards in mind: functional safety, cyber-security and software-update processes for cars. We share our internal documentation with OEM and Tier&nbsp;1 procurement teams on request.</p>
           </div>
         </div>
       </div>
@@ -68,37 +68,51 @@ const Automotive = () => (
 );
 
 const Wearables = () => {
-  const devices = [
-    { n: 'Polar H10', s: 'ECG · 1000 Hz' },
-    { n: 'Garmin Fenix', s: 'PPG · IMU' },
-    { n: 'Apple Watch', s: 'PPG · ECG · SpO2' },
-    { n: 'Samsung Galaxy', s: 'PPG · BIA' },
-    { n: 'Whoop 4.0', s: 'PPG · skin temp' },
-    { n: 'Oura Ring', s: 'PPG · temp · IMU' },
-    { n: 'Fitbit Sense', s: 'PPG · EDA · skin' },
-    { n: 'Empatica E4', s: 'EDA · BVP · IMU' },
+  const groups = [
+    {
+      n: '01',
+      t: 'Every consumer wearable',
+      d: 'We connect to the consumer off-the-shelf (COTS) wearables your users already own. If it reports a heart rate, we can read it.',
+      pills: ['Apple Watch', 'Google · Pixel', 'Samsung', 'Garmin', 'Fitbit', 'Whoop', 'Oura'],
+    },
+    {
+      n: '02',
+      t: 'Chest straps & ECG-quality sensors',
+      d: 'When you want the cleanest possible signal, we take higher-fidelity inputs too, including chest straps and ECG-grade sensors.',
+      pills: ['Polar H10', 'Movesense', 'ECG straps', 'medical-grade'],
+    },
+    {
+      n: '03',
+      t: 'No wearable at all',
+      d: 'Heart rate without anything on the body, captured contactlessly from a camera or from radar, then fed into the same pipeline.',
+      pills: ['camera rPPG', 'radar', 'contactless'],
+    },
   ];
   return (
     <section className="section" id="wearables">
       <div className="container">
         <SectionHeader idx={7} kicker="INTEGRATIONS"
-          title={<>Every wearable<br /><span className="grad-text">your users own.</span></>}
-          sub="Drop-in connectors for major COTS devices. Streams normalised to a single, modality-agnostic schema." />
-        <div className="wearables-grid">
-          {devices.map(d => (
-            <div key={d.n} className="wearable-card">
-              <div className="wearable-vis">
-                <div className="wearable-pulse" />
-              </div>
-              <div className="wearable-meta">
-                <Mono className="dim">{d.s}</Mono>
-                <div className="wearable-name">{d.n}</div>
+          title={<>Any heart-rate source,<br /><span className="grad-text">one HRV &amp; stress model.</span></>}
+          sub="We work with almost anything that reports a pulse. Whichever source it comes from, the heart rate flows into our own inference model and comes back as calibrated HRV and stress, in real time." />
+        <div className="integ-grid">
+          {groups.map(g => (
+            <div key={g.n} className="integ-card">
+              <Mono className="dim">{g.n}</Mono>
+              <h4>{g.t}</h4>
+              <p>{g.d}</p>
+              <div className="integ-pills">
+                {g.pills.map(p => <span key={p} className="logo-pill sm">{p}</span>)}
               </div>
             </div>
           ))}
         </div>
-        <div className="wearables-foot">
-          <Mono className="dim">+ 20 more · BLE GATT · ANT+ · raw stream API · iOS HealthKit · Google Health Connect</Mono>
+        <div className="integ-foot">
+          <div className="integ-foot-vis"><div className="wearable-pulse" /></div>
+          <div className="integ-foot-body">
+            <Mono className="accent-text">HR → HRV + STRESS</Mono>
+            <p>All of these feed one place: our heart-rate-to-state model. Hand it a plain heart-rate stream, even from a device that only outputs HR, and it returns calibrated HRV and a continuous stress read in real time. Everything is normalised to a single, device-agnostic schema.</p>
+          </div>
+          <Mono className="dim integ-foot-note">BLE GATT · ANT+ · raw stream API · iOS HealthKit · Google Health Connect</Mono>
         </div>
       </div>
     </section>
@@ -107,7 +121,7 @@ const Wearables = () => {
 
 const Security = () => {
   const buckets = [
-    { label: 'DESIGNED WITH IN MIND', sub: 'documented against these standards', items: ['ISO 27001', 'ISO 26262', 'ISO 21434', 'ASPICE L3', 'UN R155', 'UN R156'] },
+    { label: 'DESIGNED WITH IN MIND', sub: 'documented against these standards', items: ['ISO 27001', 'ISO 26262', 'ISO 21434', 'ASPICE L3', 'UN R155', 'UN R156', 'Euro NCAP 2026'] },
     { label: 'WORKING WITH', sub: 'regulations we operate under', items: ['UK GDPR', 'EU GDPR', 'CCPA', 'HIPAA-aligned workflows', 'EU AI Act · emotion-recognition aware'] },
     { label: 'MOVING TOWARDS', sub: 'progressing alignment / audits', items: ['SOC 2 Type II', 'ISO 27001 certification', 'ASPICE L3 formal assessment', 'Cyber Essentials Plus'] },
     { label: 'ON REQUEST', sub: 'shared with procurement / security teams', items: [], note: 'Detailed posture and internal documentation shared under NDA.' },
@@ -117,15 +131,15 @@ const Security = () => {
       <div className="container">
         <SectionHeader idx={8} kicker="TRUST & SECURITY"
           title={<>Privacy by design.<br /><span className="grad-text">Compliance by default.</span></>}
-          sub="Audit logs, key rotation, on-device feature extraction, zero raw-data egress, full data residency control." />
+          sub="Runs fully on-device, even air-gapped. Permissively-licensed models, per-occupant consent, GDPR right-to-erasure, no raw-data egress, and full control over where data lives." />
         <div className="sec-grid">
           <div className="sec-main">
             <div className="sec-pillars">
               {[
-                { t: 'Feature extraction, your call', d: 'Feature extraction can run on-device - so raw audio and video never leave the user - or in the cloud when your deployment requires it. Same model, same outputs.' },
-                { t: 'Zero-trust pipeline', d: 'mTLS, short-lived tokens, per-tenant KMS, secure deployment processes.' },
-                { t: 'Data residency', d: 'Cloud regions in EU and UK today; US and APAC on request. BYO cloud for regulated deployments. Air-gap supported for edge deployments.' },
-                { t: 'Auditability', d: 'Model versioning, change logs and reproducible builds. Signed-inference available for regulated deployments.' },
+                { t: 'Runs fully on-device', d: 'The whole engine can run self-contained on an edge box with no network calls at runtime. Raw audio and video never have to leave the vehicle.' },
+                { t: 'Clean, permissive IP', d: 'New models ship under Apache-2.0, MIT and BSD licences with documented provenance. Clean intellectual property for when an acquirer or partner runs technical diligence.' },
+                { t: 'Erasure that means it', d: 'Per-occupant consent flags, and a GDPR Article 17 erasure that cryptographically zeroes the biometric data before the record is removed. Air-gap and EU / UK data residency supported.' },
+                { t: 'Auditable by design', d: 'Versioned models, reproducible builds, signed inference, and audit logs for every enrollment, deletion and label change.' },
               ].map(p => (
                 <div key={p.t} className="sec-pillar">
                   <div className="sec-check">✓</div>
@@ -284,8 +298,8 @@ const DocsTabs = () => {
           })}
         </pre>
         <div className="code-foot">
-          <Mono className="dim">ⓘ INDICATIVE EXAMPLE</Mono>
-          <Mono className="dim">Full reference docs available on request · not the complete API surface</Mono>
+          <Mono className="dim">ⓘ ONE OF OUR APIs</Mono>
+          <Mono className="dim">Illustrative snippet · full reference docs available on request</Mono>
         </div>
       </div>
       <div className="docs-side">
@@ -319,7 +333,7 @@ const Docs = () => (
     <div className="container">
       <SectionHeader idx={9} kicker="DEVELOPER EXPERIENCE"
         title={<>Developer experience<br /><span className="grad-text">we’d want to use ourselves.</span></>}
-        sub={<>Python and TypeScript SDKs today; Swift, Kotlin, Java, Rust and C++ on the roadmap. We&rsquo;re building out comprehensive product documentation - quickstarts, API reference and recipes. The snippets below are <strong>indicative</strong> only, to give you a feel for the API. <a href="https://ea1wg59mqn4.typeform.com/to/iVv585ne" target="_blank" rel="noopener" className="link-accent">Get in touch</a> for current docs and a live demo.</>} />
+        sub={<>Python and TypeScript SDKs today, with Swift, Kotlin, Java, Rust and C++ on the roadmap. We have comprehensive product documentation and a range of APIs and SDKs. The snippet below is one of our APIs, shown to illustrate some of what the platform can do. <a href="https://ea1wg59mqn4.typeform.com/to/iVv585ne" target="_blank" rel="noopener" className="link-accent">Get in touch</a> for full docs and a live demo.</>} />
 
       <DocsTabs />
     </div>
@@ -344,7 +358,7 @@ const CTA = () => (
           Bring emotional intelligence<br />
           <span className="grad-text">to every product you ship.</span>
         </h2>
-        <p className="cta-sub">Integration is fast - most teams are running in a day with our REST API and SDKs, no extra hardware. Get an API key, talk to an engineer about your integration, or request our security &amp; automotive evidence packages. We&rsquo;ll help you go live.</p>
+        <p className="cta-sub">Integration is genuinely fast. Most teams are up and running in a day with our REST API and SDKs, with no extra hardware to buy. Get an API key, talk to an engineer about your integration, or ask for our security and automotive evidence packs. We&rsquo;ll help you go live.</p>
         <div className="cta-actions">
           <a href="https://ea1wg59mqn4.typeform.com/to/O1IhNavD" target="_blank" rel="noopener" className="btn btn-primary btn-lg">Get API access <span className="arr">→</span></a>
           <a href="https://ea1wg59mqn4.typeform.com/to/iVv585ne" target="_blank" rel="noopener" className="btn btn-ghost btn-lg">Get in touch</a>
@@ -369,7 +383,7 @@ const Footer = () => (
           <a href="#" className="logo logo-img-link" aria-label="Maaind">
             <img src="maaind_logo.png" alt="Maaind" className="logo-img logo-img-footer" />
           </a>
-          <p>Multi-modal psychophysiology - fused, calibrated, deployable anywhere your product runs.</p>
+          <p>Multimodal psychophysiology, fused and calibrated, deployable in the cloud or fully on-device.</p>
           <div className="footer-locations">
             <div><Mono className="dim">EINDHOVEN · NL</Mono><div>High Tech Campus 6A</div></div>
             <div><Mono className="dim">LONDON · UK</Mono><div>70 White Lion St, N1 9PP</div></div>

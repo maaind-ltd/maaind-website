@@ -2,16 +2,16 @@
 
 // 10 capabilities
 const CAPS = [
-  { n: '01', t: 'Multi-modal psychophysiology, end-to-end', d: 'A single inference stack that fuses voice, vision, cardiac, wearable and contextual signals into a continuous, calibrated read of human state - arousal, valence, stress, focus, fatigue, drowsiness, engagement.', tag: 'PLATFORM' },
-  { n: '02', t: 'Cloud or on-device', d: 'The same fusion model runs multi-tenant on cloud GPU or quantised down to fit a phone, automotive SOC, or air-gapped edge target. Identical APIs, your choice of deployment.', tag: 'DEPLOY' },
-  { n: '03', t: 'Automotive-grade', d: 'Informed by Euro NCAP 2026 Driver Engagement protocols including impairment and unresponsive-driver scenarios. Per-occupant tracking up to 8 simultaneous occupants for cabin sensing.', tag: 'AUTOMOTIVE' },
-  { n: '04', t: 'Multi-user mode', d: 'Disambiguate up to 8 occupants simultaneously across audio and video. Per-seat state, per-seat policy.', tag: 'CABIN' },
-  { n: '05', t: 'Works with the wearables your users own', d: 'Drop-in connectors for Polar, Garmin, Apple, Samsung, Whoop, Oura, Fitbit, Empatica - plus generic BLE GATT, ANT+, iOS HealthKit and Google Health Connect. All streams normalised to a single modality-agnostic schema.', tag: 'WEARABLES' },
-  { n: '06', t: 'Runs on every chip your product ships on', d: 'INT8 / INT4 quantised across the silicon spectrum: automotive SOCs from the major silicon families, consumer- and developer-class chips including an Intel partnership with engineering collaboration on Intel NPU, cloud GPU for multi-tenant inference, and CPU fallback for cost-sensitive deployments. Specific chip-level performance available on request.', tag: 'SILICON' },
-  { n: '07', t: 'Highly competitive speech emotion recognition', d: 'Streaming SER and stress detection across 30+ languages. Multi-speaker with speaker ID, far-field, in-cabin and noisy-environment robust - paired with our own noise-filtering front-end. Competitive with published SOTA on standard benchmarks (e.g. ~92% weighted F1 on IEMOCAP). Benchmarks and methodology available on request.', tag: 'SER' },
-  { n: '08', t: 'Fine-tune & distill - as a service', d: 'A managed engagement we run for enterprise customers. Bring your data, vertical, language or hardware target - our team adapts and distils the model with you in days, not quarters.', tag: 'SERVICE' },
-  { n: '09', t: 'Developer experience we’d want to use ourselves', d: 'Python and TypeScript SDKs today; Swift, Kotlin, Java, Rust and C++ on the roadmap. Runnable examples, a webhook simulator, and reference recipes for DMS, OMS, biofeedback and wellness apps. Live demo available on demand - get in touch.', tag: 'DEVEX' },
-  { n: '10', t: 'Standards & regulatory posture', d: 'Designed and documented with the relevant standards in mind - we are progressively moving towards alignment with ISO 27001, ISO 26262, ISO 21434, ASPICE L3 and UN R155 / R156, and we work with UK / EU GDPR, HIPAA-aligned and CCPA workflows. Mindful of the EU AI Act’s emotion-recognition provisions. Specific posture and supporting documentation shared with procurement on request.', tag: 'TRUST' },
+  { n: '01', t: 'One read of the whole person', d: 'Vision, voice and the heart, fused into one continuous read of how someone is genuinely doing. Emotion and stress first, then focus, fatigue, drowsiness and engagement. Plenty of teams do one signal well. Putting them all together is the hard part, and it is the part we built.', tag: 'PLATFORM' },
+  { n: '02', t: 'Runs on the edge, no cloud needed', d: 'The whole engine fits on a single box in the vehicle and runs fully offline. An air-gapped car behaves exactly like a connected one, because nothing ever phones home. Prefer the cloud instead? Same model, same API, your call.', tag: 'EDGE' },
+  { n: '03', t: 'Already in the cabin', d: 'Live in cabin-monitoring programmes across several R&D settings. Driver and occupant monitoring built to the Euro NCAP 2026 driver-engagement protocol, watching up to four people at once, each with their own state.', tag: 'AUTOMOTIVE' },
+  { n: '04', t: 'Four people, four reads', d: 'Driver, front passenger and whoever is in the back. Up to four occupants tracked at once across camera and microphone, each with their own state and policy. Child-presence detection is built in for the rear seats.', tag: 'CABIN' },
+  { n: '05', t: 'Everything the body shows', d: 'Far more than a single mood label. From the face we read emotion, stress, valence and arousal, plus gaze direction, head pose, eye-open state, drowsiness, yawns, and body and hand position. Heart rate and breathing come straight from the camera, with no wearable required, and our heart-rate-to-state model turns that pulse, or one from almost any wearable, into real-time HRV and stress.', tag: 'VISION + CARDIAC' },
+  { n: '06', t: 'Built for the chips you ship', d: 'Optimised for NVIDIA and a range of other GPU and NPU accelerators, with an Intel NPU collaboration and cloud GPU when you need to scale. We tune and distil to the exact silicon you ship on. Ask us about a specific chip.', tag: 'SILICON' },
+  { n: '07', t: 'State-of-the-art emotion and stress, from the voice', d: 'Speech emotion and stress recognition that holds up in a noisy, far-field cabin. The same audio also tells you who is speaking, adult or child, coughs, crying and raised voices, overlapping talkers, and whether anyone is speaking at all. Benchmarks and methodology on request.', tag: 'VOICE' },
+  { n: '08', t: 'We will tune it to you', d: 'Bring your data, your vertical and your hardware target, and our team fine-tunes and distils the model with you, usually in days rather than quarters. It is a service we run alongside you, not a docs page we point you at.', tag: 'SERVICE' },
+  { n: '09', t: 'Easy to build with', d: 'OpenAPI specs and code samples in Python, JavaScript, TypeScript, Swift, C++, Rust and Java. Streaming and request APIs, reference recipes for driver and occupant monitoring, and a live demo whenever you want one.', tag: 'DEVELOPERS' },
+  { n: '10', t: 'Clean IP, privacy built in', d: 'New models ship under permissive Apache-2.0, MIT and BSD licences with documented provenance, so the IP holds up when an acquirer runs diligence. Per-occupant consent, a right-to-erasure that genuinely wipes the biometrics, and full audit logs are all there from day one.', tag: 'TRUST' },
 ];
 
 const Capabilities = () => (
@@ -19,7 +19,7 @@ const Capabilities = () => (
     <div className="container">
       <SectionHeader idx={1} kicker="THE PLATFORM"
         title={<>One platform.<br /><span className="dim-2">Every signal that matters.</span></>}
-        sub="Most competitors do single-modality SER or single-modality DMS. Maaind ships the cross-modal model end-to-end - the fusion layer is the differentiator." />
+        sub="Most of the field does one thing well: speech emotion, say, or driver monitoring. We fuse every signal end to end, and that fusion is the whole point." />
       <div className="caps-grid">
         {CAPS.map((c, i) => (
           <div key={c.n} className={`cap-card ${i === 0 ? 'cap-feature' : ''}`}>
@@ -32,11 +32,11 @@ const Capabilities = () => (
             {i === 0 && (
               <div className="cap-preview">
                 <div className="cap-pill"><span className="cap-dot" />vision</div>
-                <div className="cap-pill"><span className="cap-dot" />speech</div>
+                <div className="cap-pill"><span className="cap-dot" />voice</div>
+                <div className="cap-pill"><span className="cap-dot" />heart rate</div>
                 <div className="cap-pill"><span className="cap-dot" />HRV</div>
-                <div className="cap-pill"><span className="cap-dot" />PPG</div>
-                <div className="cap-pill"><span className="cap-dot" />gaze</div>
-                <div className="cap-pill"><span className="cap-dot" />IMU</div>
+                <div className="cap-pill"><span className="cap-dot" />wearable</div>
+                <div className="cap-pill"><span className="cap-dot" />EEG</div>
                 <div className="cap-pill"><span className="cap-dot" />context</div>
               </div>
             )}
@@ -55,18 +55,18 @@ const Fusion = () => {
     return () => clearInterval(id);
   }, []);
   const inputs = [
-    { k: 'VISION', items: ['face_landmarks', 'gaze_vector', 'eyes_open', 'micro_expressions', 'head_pose'] },
-    { k: 'AUDIO', items: ['speech_emotion', 'stress', 'arousal/valence', 'speaker_id', 'paralinguistics'] },
-    { k: 'CARDIAC', items: ['heart_rate', 'HRV (RMSSD/SDNN)', 'PPG morphology', 'respiration', 'rPPG (camera)'] },
-    { k: 'WEARABLE', items: ['Polar · Garmin', 'Apple · Samsung', 'Fitbit · Whoop · Oura', 'IMU · accelerometer'] },
-    { k: 'CONTEXT', items: ['cabin_temp', 'weather', 'road_class', 'time_of_day', 'session_history', 'user_baseline'] },
+    { k: 'VISION', items: ['face_emotion + stress', 'gaze + eye_state', 'head_pose', 'drowsiness + yawns', 'body + hands'] },
+    { k: 'VOICE', items: ['speech_emotion + stress', 'arousal / valence', 'speaker_id', 'adult / child', 'sound_events'] },
+    { k: 'CARDIAC + WEARABLE', items: ['heart_rate in → HRV + stress out', 'PPG · rPPG (camera) · radar', 'respiration', 'Apple · Google · Polar', 'and all major COTS wearables'] },
+    { k: 'EEG', items: ['band_power', 'frontal_asymmetry', 'cognitive_workload', 'research / on request'] },
+    { k: 'CONTEXT', items: ['cabin_temp', 'road_class', 'time_of_day', 'user_baseline'] },
   ];
   return (
     <section className="section section-alt" id="fusion">
       <div className="container">
         <SectionHeader idx={2} kicker="MULTI-MODAL FUSION"
           title={<>One model. <span className="grad-text">Every signal.</span></>}
-          sub="A custom fusion engine trained on a substantial multi-modal psychophysiology corpus. Continuous, calibrated, real-time on supported architectures." />
+          sub="A custom fusion engine, trained on a large multimodal psychophysiology corpus. Continuous, calibrated and fast enough to run in real time on the hardware you already have." />
 
         <div className="fusion-stage">
           <div className="fusion-col fusion-inputs">
@@ -75,7 +75,7 @@ const Fusion = () => {
                 <div className="fusion-input-head">
                   <span className="signal-dot" />
                   <Mono>{g.k}</Mono>
-                  <Mono className="dim">{i === 0 ? '30 Hz' : i === 1 ? '16 kHz' : i === 2 ? '256 Hz' : i === 3 ? 'BLE' : 'meta'}</Mono>
+                  <Mono className="dim">{i === 0 ? 'works with any FPS' : i === 1 ? 'works with almost any voice input' : i === 2 ? 'at highest resolution possible' : i === 3 ? 'at highest hardware-capable resolution' : 'continuous'}</Mono>
                 </div>
                 <div className="fusion-input-list">
                   {g.items.map(it => <span key={it} className="mono dim2">→ {it}</span>)}
@@ -134,13 +134,13 @@ const Fusion = () => {
 };
 
 const DEPLOY_TARGETS = [
-  { name: 'NVIDIA · desktop / workstation', kind: 'GPU', notes: 'reference target · CUDA-tuned' },
-  { name: 'NVIDIA · cloud', kind: 'GPU', notes: 'datacentre · multi-tenant' },
-  { name: 'Apple Neural Engine', kind: 'NPU', notes: 'Apple Silicon · iOS / macOS' },
+  { name: 'NVIDIA Jetson Orin (NX / AGX / Nano)', kind: 'edge GPU', notes: 'production automotive target · fully offline' },
+  { name: 'NVIDIA · cloud / workstation', kind: 'GPU', notes: 'multi-tenant · CUDA-tuned' },
   { name: 'Intel', kind: 'NPU / CPU', notes: 'co-optimised with Intel · partnership' },
-  { name: 'Automotive SOCs', kind: 'NPU / DSP', notes: 'Qualcomm · Renesas · others on request' },
-  { name: 'Custom SOCs', kind: 'on request', notes: 'porting & optimisation engagement' },
+  { name: 'Apple Neural Engine', kind: 'NPU', notes: 'Apple Silicon · iOS / macOS' },
+  { name: 'Automotive SOCs', kind: 'NPU / DSP', notes: 'Qualcomm · Renesas · on request' },
   { name: 'Phone (iOS / Android)', kind: 'NPU / GPU', notes: 'on-device · subset of features' },
+  { name: 'Custom SOCs', kind: 'on request', notes: 'porting & optimisation engagement' },
 ];
 
 const Deploy = () => (
@@ -148,7 +148,7 @@ const Deploy = () => (
     <div className="container">
       <SectionHeader idx={3} kicker="DEPLOY ANYWHERE"
         title={<>Cloud, edge,<br /><span className="grad-text">or somewhere in between.</span></>}
-        sub="Same model. Same API. Tuned for the silicon targets you’d actually ship on." />
+        sub="One model, one API, tuned for the silicon you actually ship on." />
       <div className="deploy-table deploy-table-3col">
         <div className="dtable-h">
           <Mono>TARGET</Mono><Mono>ACCELERATION</Mono><Mono>NOTES</Mono>
@@ -170,7 +170,7 @@ const Deploy = () => (
         <div className="db-card">
           <Mono className="dim">ENTERPRISE SERVICE</Mono>
           <h4>Fine-tune in days,<br />distil in hours.</h4>
-          <p>A managed service we run for our enterprise customers. Bring your data, vertical or edge target - our team adapts and distils the model with you, end-to-end.</p>
+          <p>A managed service we run for enterprise customers. Bring your data, vertical or edge target, and our team adapts and distils the model with you, end to end.</p>
           <div className="db-pipe">
             <span><Mono>1</Mono><div>data ingest</div></span>
             <span className="arrow">→</span>
@@ -184,7 +184,7 @@ const Deploy = () => (
         <div className="db-card">
           <Mono className="dim">PRIVACY</Mono>
           <h4>Feature extraction<br />where you need it.</h4>
-          <p>Feature extraction can run on-device - so raw audio and video never leave the user - or in the cloud when your deployment calls for it. Same model, same API, your call.</p>
+          <p>Feature extraction can run on-device, so raw audio and video never leave the user, or in the cloud when your deployment calls for it. Same model, same API, your call.</p>
           <div className="db-flow">
             <div className="db-node"><Mono>RAW</Mono></div>
             <div className="db-arr">extract</div>

@@ -1,6 +1,9 @@
 # Maaind website
 
-Static site for `newversion.maaind.com` (and eventually `www.maaind.com`).
+Static site for **www.maaind.com** (currently also live at `newversion.maaind.com`).
+
+> **Deploying / repointing the domain?** See **DEPLOY.md** in this folder for the
+> full, current step-by-step (it supersedes the GitHub Pages notes below).
 
 ## Stack
 Plain HTML + CSS + in-browser Babel/React. No build step. Drop the folder on any
