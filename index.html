@@ -3,65 +3,78 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+
 <title>Maaind · Multimodal psychophysiology, fused and deployable anywhere</title>
+<meta name="description" content="Maaind brings vision, voice and the heart into one calibrated read of human state: emotion, stress, focus, fatigue and engagement. Runs in the cloud or fully on-device, even offline. In use across multiple verticals." />
+<link rel="canonical" href="https://www.maaind.com/" />
+<meta name="theme-color" content="#0a0c0b" />
+<meta name="robots" content="index, follow" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Maaind" />
+<meta property="og:title" content="Maaind · Multimodal psychophysiology, fused and deployable anywhere" />
+<meta property="og:description" content="One calibrated read of human state from vision, voice and the heart. Runs in the cloud or fully on-device, even offline. In use across multiple verticals." />
+<meta property="og:url" content="https://www.maaind.com/" />
+<meta property="og:image" content="https://www.maaind.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Maaind · Multimodal psychophysiology, fused and deployable anywhere" />
+<meta name="twitter:description" content="One calibrated read of human state from vision, voice and the heart. Runs in the cloud or fully on-device, even offline. In use across multiple verticals." />
+<meta name="twitter:image" content="https://www.maaind.com/og-image.png" />
+
+<link rel="icon" href="favicon.png" type="image/png" />
+<link rel="apple-touch-icon" href="favicon.png" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Maaind",
+  "url": "https://www.maaind.com/",
+  "logo": "https://www.maaind.com/maaind_logo.png",
+  "description": "Maaind builds a multimodal psychophysiology platform that fuses vision, voice and cardiac signals into one continuous, calibrated read of human state. It runs in the cloud or fully on-device, even offline, and is in use across multiple verticals.",
+  "location": [
+    { "@type": "Place", "name": "Eindhoven", "address": { "@type": "PostalAddress", "streetAddress": "High Tech Campus 6A", "addressLocality": "Eindhoven", "addressCountry": "NL" } },
+    { "@type": "Place", "name": "London", "address": { "@type": "PostalAddress", "streetAddress": "70 White Lion St", "postalCode": "N1 9PP", "addressLocality": "London", "addressCountry": "GB" } }
+  ]
+}
+</script>
 </head>
 <body>
-<div id="root"></div>
+<div id="root">
+  <!-- Static, crawlable fallback. React replaces this on load; non-JS crawlers and
+       social scrapers read it directly. Keep in sync with the hero/section copy. -->
+  <div style="max-width:880px;margin:0 auto;padding:96px 28px;font-family:Inter,system-ui,sans-serif;color:#f4f1ea;background:#0a0c0b;">
+    <img src="maaind_logo.png" alt="Maaind" width="120" style="height:28px;width:auto;margin-bottom:40px;filter:invert(1) brightness(1.6);" />
+    <h1 style="font-family:'Inter Tight',sans-serif;font-size:40px;line-height:1.05;letter-spacing:-0.03em;margin:0 0 20px;">The most multimodal psychophysiology platform on the market.</h1>
+    <p style="font-size:18px;line-height:1.5;color:rgba(244,241,234,0.72);max-width:640px;">Maaind brings vision, voice and the heart into one continuous, calibrated read of how a person is really doing: emotion, stress, focus, fatigue, drowsiness and engagement. The same engine runs in the cloud or entirely on-device, even fully offline, and is already in use across multiple verticals.</p>
+    <h2 style="font-family:'Inter Tight',sans-serif;font-size:22px;margin:48px 0 12px;">One platform, every signal that matters</h2>
+    <p style="font-size:16px;line-height:1.5;color:rgba(244,241,234,0.72);">Vision, voice and cardiac signals fused end to end. Heart rate from a camera, a chest strap or almost any consumer wearable, turned into real-time HRV and stress by our own inference model. Runs on the edge with no cloud required, and is built to the Euro NCAP 2026 driver-engagement protocol.</p>
+    <h2 style="font-family:'Inter Tight',sans-serif;font-size:22px;margin:40px 0 12px;">Where it is used</h2>
+    <p style="font-size:16px;line-height:1.5;color:rgba(244,241,234,0.72);">Automotive driver and occupant monitoring, voice AI and agents, health, wellbeing and performance, defence and safety-critical operator monitoring, insurance and consumer wellbeing.</p>
+    <p style="font-size:15px;margin-top:40px;"><a href="https://ea1wg59mqn4.typeform.com/to/O1IhNavD" style="color:#7adcb8;">Get API access</a> &nbsp;·&nbsp; <a href="https://ea1wg59mqn4.typeform.com/to/iVv585ne" style="color:#7adcb8;">Get in touch</a></p>
+    <noscript><p style="margin-top:32px;color:rgba(244,241,234,0.48);">This site is interactive and works best with JavaScript enabled.</p></noscript>
+  </div>
+</div>
 
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
 
-<script type="text/babel" src="tweaks-panel.jsx"></script>
-<script type="text/babel" src="components.jsx"></script>
-<script type="text/babel" src="sections.jsx"></script>
-<script type="text/babel" src="sections-2.jsx"></script>
-<script type="text/babel" src="sections-3.jsx"></script>
-<script type="text/babel" src="sections-4.jsx"></script>
-
-<script type="text/babel">
-const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "accent": "#7adcb8",
-  "showGrid": true,
-  "tone": "emerald"
-}/*EDITMODE-END*/;
-
-const ACCENTS = {
-  emerald: { c: 'oklch(82% 0.18 165)', c2: 'oklch(78% 0.18 178)', g: 'oklch(82% 0.18 165 / 0.18)' },
-  cyan:    { c: 'oklch(80% 0.16 220)', c2: 'oklch(78% 0.18 200)', g: 'oklch(80% 0.16 220 / 0.20)' },
-  amber:   { c: 'oklch(82% 0.16 75)',  c2: 'oklch(78% 0.18 60)',  g: 'oklch(82% 0.16 75 / 0.20)' },
-  violet:  { c: 'oklch(74% 0.18 290)', c2: 'oklch(72% 0.20 310)', g: 'oklch(74% 0.18 290 / 0.22)' },
-};
-
-const App = () => {
-  return (
-    <>
-      <Nav />
-      <main>
-        <div className="theme-zone"><Hero /></div>
-        <div className="theme-zone"><Stats /></div>
-        <div className="theme-zone"><WhyIntegrate /></div>
-        <div className="theme-zone"><Capabilities /></div>
-        <div className="theme-zone"><Fusion /></div>
-        <div className="theme-zone"><Deploy /></div>
-        <div className="theme-zone"><Automotive /></div>
-        <div className="theme-zone"><VoiceAI /></div>
-        <div className="theme-zone"><Health /></div>
-        <div className="theme-zone"><Wearables /></div>
-        <div className="theme-zone"><Security /></div>
-        <div className="theme-zone"><Docs /></div>
-        <div className="theme-zone"><CTA /></div>
-      </main>
-      <Footer />
-    </>
-  );
-};
-
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
-</script>
+<script src="tweaks-panel.js"></script>
+<script src="components.js"></script>
+<script src="sections.js"></script>
+<script src="sections-2.js"></script>
+<script src="sections-3.js"></script>
+<script src="sections-4.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
