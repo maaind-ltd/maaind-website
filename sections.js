@@ -3,49 +3,49 @@
 const THEMES = [{
   id: 'obsidian',
   label: 'Obsidian',
-  sub: 'Default · emerald on ink',
+  sub: 'Default, emerald on ink',
   bg: '#0a0c0b',
   color: 'oklch(82% 0.18 165)',
   mode: 'dark'
 }, {
   id: 'harbor',
   label: 'Harbor',
-  sub: 'Brand · teal on deep ink',
+  sub: 'Brand, teal on deep ink',
   bg: '#06130f',
   color: 'oklch(80% 0.13 178)',
   mode: 'dark'
 }, {
   id: 'atrium',
   label: 'Atrium',
-  sub: 'Brand · maaind teal on bone',
+  sub: 'Brand, maaind teal on bone',
   bg: '#fafaf5',
   color: 'oklch(56% 0.12 178)',
   mode: 'light'
 }, {
   id: 'mist',
   label: 'Mist',
-  sub: 'Brand · teal on linen-grey',
+  sub: 'Brand, teal on linen-grey',
   bg: '#eef0ec',
   color: 'oklch(54% 0.13 175)',
   mode: 'light'
 }, {
   id: 'sage',
   label: 'Sage',
-  sub: 'Warm · moss on putty',
+  sub: 'Warm, moss on putty',
   bg: '#ece8dc',
   color: 'oklch(42% 0.10 145)',
   mode: 'light'
 }, {
   id: 'bloom',
   label: 'Bloom',
-  sub: 'Warm · clay on blush',
+  sub: 'Warm, clay on blush',
   bg: '#f5ebe0',
   color: 'oklch(52% 0.13 28)',
   mode: 'light'
 }, {
   id: 'linen',
   label: 'Linen',
-  sub: 'Warm · sage on cream',
+  sub: 'Warm, sage on cream',
   bg: '#f1ece0',
   color: 'oklch(48% 0.10 150)',
   mode: 'light'
@@ -59,42 +59,42 @@ const THEMES = [{
 }, {
   id: 'fjord',
   label: 'Fjord',
-  sub: 'Cool · teal-blue on grey',
+  sub: 'Cool, teal-blue on grey',
   bg: '#eaeef2',
   color: 'oklch(50% 0.12 230)',
   mode: 'light'
 }, {
   id: 'sand',
   label: 'Sand',
-  sub: 'Warm · bronze on tan',
+  sub: 'Warm, bronze on tan',
   bg: '#f1e8d8',
   color: 'oklch(50% 0.10 65)',
   mode: 'light'
 }, {
   id: 'lilac',
   label: 'Lilac',
-  sub: 'Soft · violet on lavender',
+  sub: 'Soft, violet on lavender',
   bg: '#eeebf4',
   color: 'oklch(50% 0.14 300)',
   mode: 'light'
 }, {
   id: 'meadow',
   label: 'Meadow',
-  sub: 'Fresh · green on light',
+  sub: 'Fresh, green on light',
   bg: '#eef2e4',
   color: 'oklch(48% 0.13 145)',
   mode: 'light'
 }, {
   id: 'dusk',
   label: 'Dusk',
-  sub: 'Warm · peach on plum',
+  sub: 'Warm, peach on plum',
   bg: '#1a1018',
   color: 'oklch(82% 0.12 55)',
   mode: 'dark'
 }, {
   id: 'clay',
   label: 'Clay',
-  sub: 'Warm · terracotta on earth',
+  sub: 'Warm, terracotta on earth',
   bg: '#1a120c',
   color: 'oklch(75% 0.14 40)',
   mode: 'dark'
@@ -122,21 +122,21 @@ const THEMES = [{
 }, {
   id: 'slate',
   label: 'Slate',
-  sub: 'Cool · sky on blue-grey',
+  sub: 'Cool, sky on blue-grey',
   bg: '#0b0f15',
   color: 'oklch(80% 0.10 230)',
   mode: 'dark'
 }, {
   id: 'ember',
   label: 'Ember',
-  sub: 'Warm · coral on charcoal',
+  sub: 'Warm, coral on charcoal',
   bg: '#150d0a',
   color: 'oklch(73% 0.16 38)',
   mode: 'dark'
 }, {
   id: 'midnight',
   label: 'Midnight',
-  sub: 'Premium · gold on indigo',
+  sub: 'Premium, gold on indigo',
   bg: '#08081a',
   color: 'oklch(83% 0.13 88)',
   mode: 'dark'
@@ -418,7 +418,7 @@ const Hero = () => /*#__PURE__*/React.createElement("section", {
   className: "grad-text"
 }, "psychophysiology"), " platform", /*#__PURE__*/React.createElement("br", null), "on the market."), /*#__PURE__*/React.createElement("p", {
   className: "hero-sub"
-}, "Maaind brings vision, voice and the heart into one continuous, calibrated read of how a person is really doing: emotion, stress, focus, fatigue, drowsiness and engagement. The same engine runs in the cloud or entirely on-device, even fully offline, and is already in use across multiple verticals."), /*#__PURE__*/React.createElement("div", {
+}, "Maaind brings vision, voice and the heart into one live, calibrated read of how a person actually feels: emotion, stress, focus, fatigue, drowsiness and engagement. The same engine runs in the cloud or fully on-device, even offline, and is already working across multiple verticals."), /*#__PURE__*/React.createElement("div", {
   className: "hero-cta"
 }, /*#__PURE__*/React.createElement("a", {
   href: "https://ea1wg59mqn4.typeform.com/to/O1IhNavD",
@@ -436,11 +436,11 @@ const Hero = () => /*#__PURE__*/React.createElement("section", {
   className: "hero-reassure"
 }, /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
-}, "\u23F1 INTEGRATE IN A DAY"), /*#__PURE__*/React.createElement("span", {
+}, "INTEGRATE IN A DAY"), /*#__PURE__*/React.createElement("span", {
   className: "hr-sep"
 }), /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
-}, "drop-in REST and SDKs \xB7 runs on the device, even offline \xB7 used in various automotive settings \xB7 and we help you ship")), /*#__PURE__*/React.createElement("div", {
+}, "drop-in REST and SDKs / runs on the device, even offline / used in various automotive settings / and we help you ship")), /*#__PURE__*/React.createElement("div", {
   className: "hero-viz"
 }, /*#__PURE__*/React.createElement("div", {
   className: "viz-frame"
@@ -450,7 +450,7 @@ const Hero = () => /*#__PURE__*/React.createElement("section", {
   className: "viz-traffic"
 }, /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", null)), /*#__PURE__*/React.createElement(Mono, {
   className: "viz-path"
-}, "maaind/runtime \xB7 session_8a3f \xB7 24fps \xB7 npu"), /*#__PURE__*/React.createElement("div", {
+}, "maaind/runtime / session_8a3f / 24fps / npu"), /*#__PURE__*/React.createElement("div", {
   className: "viz-live"
 }, /*#__PURE__*/React.createElement("span", {
   className: "live-dot"
@@ -462,7 +462,7 @@ const Hero = () => /*#__PURE__*/React.createElement("section", {
   className: "viz-card"
 }, /*#__PURE__*/React.createElement("div", {
   className: "viz-card-h"
-}, /*#__PURE__*/React.createElement(Mono, null, "VISION \xB7 ANY FPS"), /*#__PURE__*/React.createElement(Mono, {
+}, /*#__PURE__*/React.createElement(Mono, null, "VISION / ANY FPS"), /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
 }, "live")), /*#__PURE__*/React.createElement("div", {
   className: "cv-stage cv-stage-photo"
@@ -496,7 +496,7 @@ const Hero = () => /*#__PURE__*/React.createElement("section", {
   className: "dim"
 }, "EYES"), /*#__PURE__*/React.createElement(Mono, {
   className: "accent-text"
-}, "open \xB7 0.98")), /*#__PURE__*/React.createElement("div", {
+}, "open / 0.98")), /*#__PURE__*/React.createElement("div", {
   className: "cv-readout"
 }, /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
@@ -512,7 +512,7 @@ const Hero = () => /*#__PURE__*/React.createElement("section", {
   className: "viz-card mini"
 }, /*#__PURE__*/React.createElement("div", {
   className: "viz-card-h"
-}, /*#__PURE__*/React.createElement(Mono, null, "HRV \xB7 RMSSD"), /*#__PURE__*/React.createElement(Mono, {
+}, /*#__PURE__*/React.createElement(Mono, null, "HRV / RMSSD"), /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
 }, "42 ms")), /*#__PURE__*/React.createElement(HRTrace, {
   width: 520,
@@ -523,7 +523,7 @@ const Hero = () => /*#__PURE__*/React.createElement("section", {
   className: "viz-card"
 }, /*#__PURE__*/React.createElement("div", {
   className: "viz-card-h"
-}, /*#__PURE__*/React.createElement(Mono, null, "VOICE \xB7 MULTI-SPEAKER"), /*#__PURE__*/React.createElement(Mono, {
+}, /*#__PURE__*/React.createElement(Mono, null, "VOICE / MULTI-SPEAKER"), /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
 }, "noise-robust")), /*#__PURE__*/React.createElement("div", {
   style: {
@@ -536,19 +536,19 @@ const Hero = () => /*#__PURE__*/React.createElement("section", {
   className: "speech-tags"
 }, /*#__PURE__*/React.createElement("span", {
   className: "chip"
-}, "speaker \xB7 S2"), /*#__PURE__*/React.createElement("span", {
+}, "speaker / S2"), /*#__PURE__*/React.createElement("span", {
   className: "chip"
-}, "lang \xB7 en-GB"), /*#__PURE__*/React.createElement("span", {
+}, "lang / en-GB"), /*#__PURE__*/React.createElement("span", {
   className: "chip"
-}, "stress \xB7 low"), /*#__PURE__*/React.createElement("span", {
+}, "stress / low"), /*#__PURE__*/React.createElement("span", {
   className: "chip"
-}, "valence \xB7 +0.41"), /*#__PURE__*/React.createElement("span", {
+}, "valence / +0.41"), /*#__PURE__*/React.createElement("span", {
   className: "chip accent"
-}, "SNR \xB7 \u22126 dB \u2713"))), /*#__PURE__*/React.createElement("div", {
+}, "SNR / \u22126 dB \u2713"))), /*#__PURE__*/React.createElement("div", {
   className: "viz-card"
 }, /*#__PURE__*/React.createElement("div", {
   className: "viz-card-h"
-}, /*#__PURE__*/React.createElement(Mono, null, "FUSION \xB7 STATE"), /*#__PURE__*/React.createElement(Mono, {
+}, /*#__PURE__*/React.createElement(Mono, null, "FUSION / STATE"), /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
 }, "on supported HW")), /*#__PURE__*/React.createElement("div", {
   style: {
@@ -585,9 +585,9 @@ const Hero = () => /*#__PURE__*/React.createElement("section", {
   className: "viz-foot"
 }, /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
-}, "\u25B8 multi-user \xB7 multimodal \xB7 multilingual"), /*#__PURE__*/React.createElement(Mono, {
+}, "multi-user / multimodal / multilingual"), /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
-}, "cloud \xB7 edge \xB7 automotive \xB7 phone")))), /*#__PURE__*/React.createElement("div", {
+}, "cloud / edge / automotive / phone")))), /*#__PURE__*/React.createElement("div", {
   className: "hero-logos"
 }, /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
@@ -634,7 +634,7 @@ const Stats = () => /*#__PURE__*/React.createElement("section", {
   className: "stat-label"
 }, "speech emotion + stress F1", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("span", {
   className: "dim mono"
-}, "IEMOCAP \xB7 on par with published state of the art"))), /*#__PURE__*/React.createElement("div", {
+}, "IEMOCAP / on par with published state of the art"))), /*#__PURE__*/React.createElement("div", {
   className: "stat"
 }, /*#__PURE__*/React.createElement("div", {
   className: "stat-num"
@@ -645,7 +645,7 @@ const Stats = () => /*#__PURE__*/React.createElement("section", {
   className: "stat-label"
 }, "inference latency", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("span", {
   className: "dim mono"
-}, "on supported architectures \xB7 cloud / on-prem varies"))), /*#__PURE__*/React.createElement("div", {
+}, "on supported architectures / cloud / on-prem varies"))), /*#__PURE__*/React.createElement("div", {
   className: "stat"
 }, /*#__PURE__*/React.createElement("div", {
   className: "stat-num"
@@ -655,7 +655,7 @@ const Stats = () => /*#__PURE__*/React.createElement("section", {
   className: "stat-label"
 }, "modality families fused", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("span", {
   className: "dim mono"
-}, "voice \xB7 vision \xB7 cardiac+wearable \xB7 EEG \xB7 context"))), /*#__PURE__*/React.createElement("div", {
+}, "voice / vision / cardiac+wearable / EEG / context"))), /*#__PURE__*/React.createElement("div", {
   className: "stat"
 }, /*#__PURE__*/React.createElement("div", {
   className: "stat-num"
@@ -663,7 +663,7 @@ const Stats = () => /*#__PURE__*/React.createElement("section", {
   to: 30
 }), "+"), /*#__PURE__*/React.createElement("div", {
   className: "stat-label"
-}, "languages, streaming", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("span", {
+}, "languages / streaming", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("span", {
   className: "dim mono"
 }, "speech emotion + stress recognition"))))));
 Object.assign(window, {

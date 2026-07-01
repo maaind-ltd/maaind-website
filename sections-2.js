@@ -126,7 +126,7 @@ const Fusion = () => {
     items: ['speech_emotion + stress', 'arousal / valence', 'speaker_id', 'adult / child', 'sound_events']
   }, {
     k: 'CARDIAC + WEARABLE',
-    items: ['heart_rate in → HRV + stress out', 'PPG · rPPG (camera) · radar', 'respiration', 'Apple · Google · Polar', 'and all major COTS wearables']
+    items: ['heart_rate in → HRV + stress out', 'PPG / rPPG (camera) / radar', 'respiration', 'Apple / Google / Polar', 'and all major COTS wearables']
   }, {
     k: 'EEG',
     items: ['band_power', 'frontal_asymmetry', 'cognitive_workload', 'research / on request']
@@ -269,27 +269,27 @@ const Fusion = () => {
 const DEPLOY_TARGETS = [{
   name: 'NVIDIA Jetson Orin (NX / AGX / Nano)',
   kind: 'edge GPU',
-  notes: 'production automotive target · fully offline'
+  notes: 'production automotive target / fully offline'
 }, {
-  name: 'NVIDIA · cloud / workstation',
+  name: 'NVIDIA / cloud / workstation',
   kind: 'GPU',
-  notes: 'multi-tenant · CUDA-tuned'
+  notes: 'multi-tenant / CUDA-tuned'
 }, {
   name: 'Intel',
   kind: 'NPU / CPU',
-  notes: 'co-optimised with Intel · partnership'
+  notes: 'co-optimised with Intel / partnership'
 }, {
   name: 'Apple Neural Engine',
   kind: 'NPU',
-  notes: 'Apple Silicon · iOS / macOS'
+  notes: 'Apple Silicon / iOS / macOS'
 }, {
   name: 'Automotive SOCs',
   kind: 'NPU / DSP',
-  notes: 'Qualcomm · Renesas · on request'
+  notes: 'Qualcomm / Renesas / on request'
 }, {
   name: 'Phone (iOS / Android)',
   kind: 'NPU / GPU',
-  notes: 'on-device · subset of features'
+  notes: 'on-device / subset of features'
 }, {
   name: 'Custom SOCs',
   kind: 'on request',
@@ -330,8 +330,8 @@ const Deploy = () => /*#__PURE__*/React.createElement("section", {
   className: "deploy-bottom"
 }, /*#__PURE__*/React.createElement("div", {
   className: "db-card"
-}, /*#__PURE__*/React.createElement(Mono, {
-  className: "dim"
+}, /*#__PURE__*/React.createElement("span", {
+  className: "kicker"
 }, "ENTERPRISE SERVICE"), /*#__PURE__*/React.createElement("h4", null, "Fine-tune in days,", /*#__PURE__*/React.createElement("br", null), "distil in hours."), /*#__PURE__*/React.createElement("p", null, "A managed service we run for enterprise customers. Bring your data, vertical or edge target, and our team adapts and distils the model with you, end to end."), /*#__PURE__*/React.createElement("div", {
   className: "db-pipe"
 }, /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement(Mono, null, "1"), /*#__PURE__*/React.createElement("div", null, "data ingest")), /*#__PURE__*/React.createElement("span", {
@@ -342,8 +342,8 @@ const Deploy = () => /*#__PURE__*/React.createElement("section", {
   className: "arrow"
 }, "\u2192"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement(Mono, null, "4"), /*#__PURE__*/React.createElement("div", null, "deploy")))), /*#__PURE__*/React.createElement("div", {
   className: "db-card"
-}, /*#__PURE__*/React.createElement(Mono, {
-  className: "dim"
+}, /*#__PURE__*/React.createElement("span", {
+  className: "kicker"
 }, "PRIVACY"), /*#__PURE__*/React.createElement("h4", null, "Feature extraction", /*#__PURE__*/React.createElement("br", null), "where you need it."), /*#__PURE__*/React.createElement("p", null, "Feature extraction can run on-device, so raw audio and video never leave the user, or in the cloud when your deployment calls for it. Same model, same API, your call."), /*#__PURE__*/React.createElement("div", {
   className: "db-flow"
 }, /*#__PURE__*/React.createElement("div", {

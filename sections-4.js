@@ -13,28 +13,28 @@ const BENEFITS_X = [{
   n: '02',
   t: 'Smarter voice AI & agents',
   d: 'Give your assistant, IVR, copilot or LLM agent a sense of how the user actually feels, and let it respond accordingly.',
-  eyebrow: 'AGENTS · VOICE AI',
+  eyebrow: 'AGENTS / VOICE AI',
   long: 'Most LLMs and voice stacks are deaf to how the person actually feels. Maaind layers a real-time read of arousal, valence, stress and frustration over any agent, whether that is a voice copilot, an IVR, an in-cabin assistant or a customer-care bot. Agents that hear tone, not just transcripts, and answer accordingly.',
   points: [['Tone-aware turn-taking', 'stop interrupting the frustrated caller, slow down for the overloaded one'], ['Sentiment-routed IVR', 'escalate angry or distressed users to a human, automatically'], ['LLM context-on-tap', 'feed state into your prompt loop as plain JSON or function-tool calls']]
 }, {
   n: '03',
   t: 'Smarter, personalised environments',
   d: 'Adapt vehicles, devices, operator stations and ambient systems to the human in the loop, in real time.',
-  eyebrow: 'AMBIENT · AUTOMOTIVE',
+  eyebrow: 'AMBIENT / AUTOMOTIVE',
   long: 'Cars, devices, operator stations, lighting and audio can all adapt once the system knows whether the user is calm or overwhelmed, focused or distracted. Ambient temperature, music tempo, suggestion timing, content density, HUD complexity. The same model runs in the cloud or quantised down to an automotive SOC.',
-  points: [['Per-occupant adaptation', 'up to four occupants at once, each with their own state and policy'], ['HVAC · audio · lighting · HUD', 'a control signal for any ambient system in the cabin or room'], ['Cloud or on-SOC', 'INT8 / INT4 quantised across automotive, mobile and edge silicon']]
+  points: [['Per-occupant adaptation', 'up to four occupants at once, each with their own state and policy'], ['HVAC / audio / lighting / HUD', 'a control signal for any ambient system in the cabin or room'], ['Cloud or on-SOC', 'INT8 / INT4 quantised across automotive, mobile and edge silicon']]
 }, {
   n: '04',
   t: 'Health, wellbeing & performance',
   d: 'Support people through stress, recovery, focus and resilience. Clinically-grounded signals, with a consumer-grade experience on top.',
-  eyebrow: 'HEALTH · DTx',
+  eyebrow: 'HEALTH / DTx',
   long: 'Clinically-grounded signals, including HRV, respiration, voice biomarkers, sleep architecture and daily stress load, wrapped in outputs an everyday user can actually understand. It powers mental-wellbeing apps, recovery coaches, occupational-health programmes and digital therapeutics with regulated workflows.',
   points: [['Stress, recovery, readiness', 'continuous daily indices that work alongside the wearables your users already own'], ['Clinical signals, consumer UX', 'HRV / RMSSD / SDNN / EDA / respiration normalised to one schema'], ['DTx-ready', 'designed for regulated workflows and clinical-research deployments']]
 }, {
   n: '05',
   t: 'Understand your users, deeply',
   d: 'A continuous read of emotion, psychology and state, for product analytics, research, safety and personalisation.',
-  eyebrow: 'INSIGHTS · RESEARCH',
+  eyebrow: 'INSIGHTS / RESEARCH',
   long: 'A continuous, multimodal read of what your users actually feel as they use your product. Not post-hoc surveys, not sentiment-guessing on text, but a calibrated, time-aligned signal. Built for product analytics teams, user-research labs, safety teams and personalisation engines.',
   points: [['Time-aligned with telemetry', 'fuse psychological state with your existing product events'], ['Cohorts & segments', 'per-user baselines so deltas are meaningful, not noise'], ['Safety & personalisation', 'flag distress, surface the right content, adapt difficulty']]
 }];
@@ -67,16 +67,16 @@ const WhyIntegrate = () => {
   }, /*#__PURE__*/React.createElement("div", {
     className: "eyebrow"
   }, /*#__PURE__*/React.createElement("span", {
-    className: "eyebrow-line"
-  }), /*#__PURE__*/React.createElement(Mono, {
-    className: "dim"
-  }, "\u23F5 WHY INTEGRATE MAAIND")), /*#__PURE__*/React.createElement("h2", {
+    className: "eyebrow-bar"
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "eyebrow-kicker"
+  }, "WHY INTEGRATE MAAIND")), /*#__PURE__*/React.createElement("h2", {
     className: "why-title"
   }, "One integration.", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("span", {
     className: "grad-text"
   }, "Five compounding benefits.")), /*#__PURE__*/React.createElement("p", {
     className: "why-sub"
-  }, "Tap any card to open it up. The same fusion model sits behind every one of these, so once you adopt one, the rest come almost for free.")), /*#__PURE__*/React.createElement("div", {
+  }, "Tap any card to open it up. One fusion model sits behind all five, so adopt one and the rest come almost for free.")), /*#__PURE__*/React.createElement("div", {
     className: "benefit-grid-x"
   }, cards, /*#__PURE__*/React.createElement("div", {
     className: 'benefit-detail' + (active ? ' open' : ''),
@@ -87,7 +87,9 @@ const WhyIntegrate = () => {
     className: "benefit-detail-body"
   }, /*#__PURE__*/React.createElement("div", {
     className: "benefit-detail-eyebrow"
-  }, /*#__PURE__*/React.createElement(Mono, null, active.n, " \xB7 ", active.eyebrow)), /*#__PURE__*/React.createElement("h3", null, active.t), /*#__PURE__*/React.createElement("p", null, active.long)), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "eyebrow-kicker"
+  }, active.n, " / ", active.eyebrow)), /*#__PURE__*/React.createElement("h3", null, active.t), /*#__PURE__*/React.createElement("p", null, active.long)), /*#__PURE__*/React.createElement("div", {
     className: "benefit-detail-points"
   }, active.points.map(([k, v], i) => /*#__PURE__*/React.createElement("div", {
     key: i,
@@ -111,9 +113,9 @@ const LogoStrip = () => {
     "aria-label": "Trusted by enterprise customers and partners"
   }, /*#__PURE__*/React.createElement("div", {
     className: "trust-statement"
-  }, /*#__PURE__*/React.createElement(Mono, {
-    className: "dim"
-  }, "\u23F5 TRUSTED BY"), /*#__PURE__*/React.createElement("p", {
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "eyebrow-kicker"
+  }, "TRUSTED BY"), /*#__PURE__*/React.createElement("p", {
     className: "trust-line"
   }, "Enterprise customers and partners across ", /*#__PURE__*/React.createElement("span", {
     className: "accent-text"
@@ -134,7 +136,7 @@ const VoiceAI = () => {
     className: "container"
   }, /*#__PURE__*/React.createElement(SectionHeader, {
     idx: 5,
-    kicker: "USE CASE \xB7 AGENTS",
+    kicker: "USE CASE / AGENTS",
     title: /*#__PURE__*/React.createElement(React.Fragment, null, "Agents that ", /*#__PURE__*/React.createElement("span", {
       className: "grad-text"
     }, "hear how you feel"), ", not just what you said."),
@@ -153,7 +155,7 @@ const VoiceAI = () => {
     className: "vp-hud-item"
   }, /*#__PURE__*/React.createElement(Mono, {
     className: "dim"
-  }, "SESSION"), /*#__PURE__*/React.createElement(Mono, null, "call_38a \xB7 live")), /*#__PURE__*/React.createElement("div", {
+  }, "SESSION"), /*#__PURE__*/React.createElement(Mono, null, "call_38a / live")), /*#__PURE__*/React.createElement("div", {
     className: "vp-hud-item"
   }, /*#__PURE__*/React.createElement(Mono, {
     className: "dim"
@@ -172,7 +174,7 @@ const VoiceAI = () => {
     className: "dim"
   }, "ACTION"), /*#__PURE__*/React.createElement(Mono, {
     className: "accent-text"
-  }, "\u2192 slow cadence \xB7 empathise"))), /*#__PURE__*/React.createElement("div", {
+  }, "\u2192 slow cadence / empathise"))), /*#__PURE__*/React.createElement("div", {
     className: "vp-call"
   }, /*#__PURE__*/React.createElement("div", {
     className: "vp-side"
@@ -189,9 +191,9 @@ const VoiceAI = () => {
     className: "vp-side-meta"
   }, /*#__PURE__*/React.createElement("span", {
     className: "vp-name"
-  }, "Caller \xB7 E. Vasquez"), /*#__PURE__*/React.createElement(Mono, {
+  }, "Caller / E. Vasquez"), /*#__PURE__*/React.createElement(Mono, {
     className: "dim"
-  }, "en-GB \xB7 live"))), /*#__PURE__*/React.createElement("div", {
+  }, "en-GB / live"))), /*#__PURE__*/React.createElement("div", {
     className: "vp-msgs"
   }, /*#__PURE__*/React.createElement("div", {
     className: "vp-msg"
@@ -199,9 +201,9 @@ const VoiceAI = () => {
     className: "vp-msg-meta"
   }, /*#__PURE__*/React.createElement("span", {
     className: "chip"
-  }, "stress \xB7 0.71"), /*#__PURE__*/React.createElement("span", {
+  }, "stress / 0.71"), /*#__PURE__*/React.createElement("span", {
     className: "chip"
-  }, "valence \xB7 \u22120.42")), /*#__PURE__*/React.createElement("div", {
+  }, "valence / \u22120.42")), /*#__PURE__*/React.createElement("div", {
     className: "vp-wave"
   }, Array.from({
     length: 28
@@ -249,7 +251,7 @@ const VoiceAI = () => {
     className: "vp-side-meta"
   }, /*#__PURE__*/React.createElement("span", {
     className: "vp-name"
-  }, "Agent \xB7 maaind-aware"), /*#__PURE__*/React.createElement(Mono, {
+  }, "Agent / maaind-aware"), /*#__PURE__*/React.createElement(Mono, {
     className: "dim"
   }, "adapting to caller state"))), /*#__PURE__*/React.createElement("div", {
     className: "vp-msgs"
@@ -263,28 +265,28 @@ const VoiceAI = () => {
     className: "chip"
   }, "cadence \u221220%"), /*#__PURE__*/React.createElement("span", {
     className: "chip"
-  }, "tone \xB7 warm"))), /*#__PURE__*/React.createElement("div", {
+  }, "tone / warm"))), /*#__PURE__*/React.createElement("div", {
     className: "vp-msg agent"
   }, "\"While I look into it, would it be easier if I called you back in five minutes?\"", /*#__PURE__*/React.createElement("div", {
     className: "vp-msg-meta"
   }, /*#__PURE__*/React.createElement("span", {
     className: "chip"
-  }, "offer \xB7 async"), /*#__PURE__*/React.createElement("span", {
+  }, "offer / async"), /*#__PURE__*/React.createElement("span", {
     className: "chip"
-  }, "route \xB7 escalate(L2)"))))))), /*#__PURE__*/React.createElement("div", {
+  }, "route / escalate(L2)"))))))), /*#__PURE__*/React.createElement("div", {
     className: "usecase-side"
   }, /*#__PURE__*/React.createElement("div", {
     className: "usecase-feature"
-  }, /*#__PURE__*/React.createElement(Mono, {
-    className: "dim"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "kicker"
   }, "IVR & CONTACT CENTRE"), /*#__PURE__*/React.createElement("h4", null, "Sentiment-routed support"), /*#__PURE__*/React.createElement("p", null, "Detect frustration, distress or churn-risk in the first 10 seconds, then route to the right agent, script and tier. It cuts average handle time and lifts CSAT.")), /*#__PURE__*/React.createElement("div", {
     className: "usecase-feature"
-  }, /*#__PURE__*/React.createElement(Mono, {
-    className: "dim"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "kicker"
   }, "VOICE COPILOTS"), /*#__PURE__*/React.createElement("h4", null, "Tone-aware assistants"), /*#__PURE__*/React.createElement("p", null, "In-cabin, in-app, in-home. The assistant slows down for the overloaded, gets out of the way of the focused, and asks before interrupting the calm.")), /*#__PURE__*/React.createElement("div", {
     className: "usecase-feature"
-  }, /*#__PURE__*/React.createElement(Mono, {
-    className: "dim"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "kicker"
   }, "LLM AGENTS"), /*#__PURE__*/React.createElement("h4", null, "Emotion as a context channel"), /*#__PURE__*/React.createElement("p", null, "Feed continuous emotional state into your prompt loop or function-tool surface. Agents that respond to ", /*#__PURE__*/React.createElement("em", null, "how"), " the user is asking, not just what they said."))))));
 };
 
@@ -341,7 +343,7 @@ const Health = () => {
     className: "container"
   }, /*#__PURE__*/React.createElement(SectionHeader, {
     idx: 6,
-    kicker: "USE CASE \xB7 HEALTH & WELLBEING",
+    kicker: "USE CASE / HEALTH & WELLBEING",
     title: /*#__PURE__*/React.createElement(React.Fragment, null, "Clinical signals.", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("span", {
       className: "grad-text"
     }, "Consumer-grade UX.")),
@@ -369,13 +371,13 @@ const Health = () => {
     className: "status-dot"
   }), /*#__PURE__*/React.createElement(Mono, {
     className: "accent-text"
-  }, "L. Hartmann \xB7 day 14")), /*#__PURE__*/React.createElement("div", {
+  }, "L. Hartmann / day 14")), /*#__PURE__*/React.createElement("div", {
     className: "health-portrait-tag"
   }, /*#__PURE__*/React.createElement("span", {
     className: "chip accent"
-  }, "recovery \xB7 78"), /*#__PURE__*/React.createElement("span", {
+  }, "recovery / 78"), /*#__PURE__*/React.createElement("span", {
     className: "chip"
-  }, "strain \xB7 12.4"))), /*#__PURE__*/React.createElement("div", {
+  }, "strain / 12.4"))), /*#__PURE__*/React.createElement("div", {
     className: "health-vitals"
   }, /*#__PURE__*/React.createElement("div", {
     className: "health-vitals-row"
@@ -383,7 +385,7 @@ const Health = () => {
     className: "health-tile"
   }, /*#__PURE__*/React.createElement(Mono, {
     className: "dim"
-  }, "HRV \xB7 RMSSD"), /*#__PURE__*/React.createElement("div", {
+  }, "HRV / RMSSD"), /*#__PURE__*/React.createElement("div", {
     className: "health-tile-v"
   }, "52", /*#__PURE__*/React.createElement("span", {
     style: {
@@ -419,15 +421,15 @@ const Health = () => {
     className: "health-chart"
   }, /*#__PURE__*/React.createElement("div", {
     className: "health-chart-h"
-  }, /*#__PURE__*/React.createElement(Mono, null, "HRV \xB7 24h trace"), /*#__PURE__*/React.createElement(Mono, {
+  }, /*#__PURE__*/React.createElement(Mono, null, "HRV / 24h trace"), /*#__PURE__*/React.createElement(Mono, {
     className: "dim"
-  }, "restorative window 23:00\u201306:00")), /*#__PURE__*/React.createElement(HRVPath, null)), /*#__PURE__*/React.createElement("div", {
+  }, "restorative window 23:00-06:00")), /*#__PURE__*/React.createElement(HRVPath, null)), /*#__PURE__*/React.createElement("div", {
     className: "health-stress"
   }, /*#__PURE__*/React.createElement("div", {
     className: "health-chart-h"
   }, /*#__PURE__*/React.createElement(Mono, null, "DAILY STRESS LOAD"), /*#__PURE__*/React.createElement(Mono, {
     className: "dim"
-  }, "moderate \xB7 burnout-risk 0.18")), /*#__PURE__*/React.createElement("div", {
+  }, "moderate / burnout-risk 0.18")), /*#__PURE__*/React.createElement("div", {
     className: "health-stress-bar"
   }, stressDay.map((v, i) => {
     const c = v < 0.3 ? 'var(--accent)' : v < 0.55 ? 'var(--accent-2)' : 'oklch(72% 0.16 35)';
@@ -442,16 +444,16 @@ const Health = () => {
     className: "usecase-side"
   }, /*#__PURE__*/React.createElement("div", {
     className: "usecase-feature"
-  }, /*#__PURE__*/React.createElement(Mono, {
-    className: "dim"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "kicker"
   }, "MENTAL WELLBEING"), /*#__PURE__*/React.createElement("h4", null, "Stress & burnout, before the crash"), /*#__PURE__*/React.createElement("p", null, "Continuous daily stress load and recovery balance. Surface concerning trends days before users notice them themselves, for wellness apps, EAPs and occupational-health programmes.")), /*#__PURE__*/React.createElement("div", {
     className: "usecase-feature"
-  }, /*#__PURE__*/React.createElement(Mono, {
-    className: "dim"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "kicker"
   }, "RECOVERY & PERFORMANCE"), /*#__PURE__*/React.createElement("h4", null, "Readiness with real signals"), /*#__PURE__*/React.createElement("p", null, "HRV-based readiness, sleep architecture, training-load balance. Works with Polar, Garmin, Apple, Whoop, Oura and Empatica out of the box.")), /*#__PURE__*/React.createElement("div", {
     className: "usecase-feature"
-  }, /*#__PURE__*/React.createElement(Mono, {
-    className: "dim"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "kicker"
   }, "DIGITAL THERAPEUTICS"), /*#__PURE__*/React.createElement("h4", null, "DTx-grade signals, regulated workflows"), /*#__PURE__*/React.createElement("p", null, "Clinically-grounded streams, including HRV, EDA, respiration and voice biomarkers, with auditability, signed inference and data-residency controls for regulated deployments."))))));
 };
 Object.assign(window, {

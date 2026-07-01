@@ -60,11 +60,7 @@ const Automotive = () => /*#__PURE__*/React.createElement("section", {
   name: 'S. Tanaka'
 }].map((o, i) => /*#__PURE__*/React.createElement("div", {
   key: i,
-  className: "occupant",
-  style: {
-    left: `${o.x}%`,
-    top: `${o.y}%`
-  }
+  className: "occupant"
 }, /*#__PURE__*/React.createElement("div", {
   className: "occ-bbox"
 }, /*#__PURE__*/React.createElement("div", {
@@ -106,7 +102,7 @@ const Automotive = () => /*#__PURE__*/React.createElement("section", {
   }
 })), /*#__PURE__*/React.createElement("div", {
   className: "occ-label"
-}, /*#__PURE__*/React.createElement(Mono, null, o.label, " \xB7 ", o.name), /*#__PURE__*/React.createElement(Mono, {
+}, /*#__PURE__*/React.createElement(Mono, null, o.label, " / ", o.name), /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
 }, o.state), /*#__PURE__*/React.createElement("div", {
   className: "mini-bar slim"
@@ -120,7 +116,7 @@ const Automotive = () => /*#__PURE__*/React.createElement("section", {
   className: "hud-item"
 }, /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
-}, "CABIN STATE"), /*#__PURE__*/React.createElement(Mono, null, "3 attentive \xB7 1 drowsy")), /*#__PURE__*/React.createElement("div", {
+}, "CABIN STATE"), /*#__PURE__*/React.createElement(Mono, null, "3 attentive / 1 drowsy")), /*#__PURE__*/React.createElement("div", {
   className: "hud-item"
 }, /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
@@ -130,16 +126,16 @@ const Automotive = () => /*#__PURE__*/React.createElement("section", {
   className: "hud-item"
 }, /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
-}, "CHIP"), /*#__PURE__*/React.createElement(Mono, null, "Jetson Orin \xB7 38 ms"))))), /*#__PURE__*/React.createElement("div", {
+}, "CHIP"), /*#__PURE__*/React.createElement(Mono, null, "Jetson Orin / 38 ms"))))), /*#__PURE__*/React.createElement("div", {
   className: "auto-side"
 }, /*#__PURE__*/React.createElement("div", {
   className: "auto-feature"
-}, /*#__PURE__*/React.createElement(Mono, {
-  className: "dim"
+}, /*#__PURE__*/React.createElement("span", {
+  className: "kicker"
 }, "SAFETY"), /*#__PURE__*/React.createElement("h4", null, "Driver monitoring (DMS)"), /*#__PURE__*/React.createElement("p", null, "Drowsiness, microsleep, distraction, eyes-off-road, hands-near-wheel and the unresponsive-driver case. Built to the Euro NCAP 2026 driver-engagement protocol, using the timing thresholds it asks for.")), /*#__PURE__*/React.createElement("div", {
   className: "auto-feature"
-}, /*#__PURE__*/React.createElement(Mono, {
-  className: "dim"
+}, /*#__PURE__*/React.createElement("span", {
+  className: "kicker"
 }, "COMFORT"), /*#__PURE__*/React.createElement("h4", null, "Occupant wellbeing (OMS)"), /*#__PURE__*/React.createElement("p", null, "Per-seat stress, mood and engagement, enough for the car to tune climate, audio and ambient lighting to whoever is actually sitting there."), /*#__PURE__*/React.createElement("p", {
   style: {
     marginTop: 8,
@@ -148,15 +144,15 @@ const Automotive = () => /*#__PURE__*/React.createElement("section", {
   }
 }, "Per-seat OMS requires cabin camera + seat-PPG / capacitive-sensor inputs at integration.")), /*#__PURE__*/React.createElement("div", {
   className: "auto-feature"
-}, /*#__PURE__*/React.createElement(Mono, {
-  className: "dim"
+}, /*#__PURE__*/React.createElement("span", {
+  className: "kicker"
 }, "STANDARDS POSTURE"), /*#__PURE__*/React.createElement("h4", null, "Aligned with automotive safety & cyber standards"), /*#__PURE__*/React.createElement("p", null, "The platform is built and documented with the major automotive standards in mind: functional safety, cyber-security and software-update processes for cars. We share our internal documentation with OEM and Tier\xA01 procurement teams on request."))))));
 const Wearables = () => {
   const groups = [{
     n: '01',
     t: 'Every consumer wearable',
     d: 'We connect to the consumer off-the-shelf (COTS) wearables your users already own. If it reports a heart rate, we can read it.',
-    pills: ['Apple Watch', 'Google · Pixel', 'Samsung', 'Garmin', 'Fitbit', 'Whoop', 'Oura']
+    pills: ['Apple Watch', 'Google / Pixel', 'Samsung', 'Garmin', 'Fitbit', 'Whoop', 'Oura']
   }, {
     n: '02',
     t: 'Chest straps & ECG-quality sensors',
@@ -204,26 +200,21 @@ const Wearables = () => {
     className: "accent-text"
   }, "HR \u2192 HRV + STRESS"), /*#__PURE__*/React.createElement("p", null, "All of these feed one place: our heart-rate-to-state model. Hand it a plain heart-rate stream, even from a device that only outputs HR, and it returns calibrated HRV and a continuous stress read in real time. Everything is normalised to a single, device-agnostic schema.")), /*#__PURE__*/React.createElement(Mono, {
     className: "dim integ-foot-note"
-  }, "BLE GATT \xB7 ANT+ \xB7 raw stream API \xB7 iOS HealthKit \xB7 Google Health Connect"))));
+  }, "BLE GATT / ANT+ / raw stream API / iOS HealthKit / Google Health Connect"))));
 };
 const Security = () => {
   const buckets = [{
     label: 'DESIGNED WITH IN MIND',
     sub: 'documented against these standards',
-    items: ['ISO 27001', 'ISO 26262', 'ISO 21434', 'ASPICE L3', 'UN R155', 'UN R156', 'Euro NCAP 2026']
+    items: ['ISO 27001', 'ASPICE L3', 'Euro NCAP 2026']
   }, {
     label: 'WORKING WITH',
     sub: 'regulations we operate under',
-    items: ['UK GDPR', 'EU GDPR', 'CCPA', 'HIPAA-aligned workflows', 'EU AI Act · emotion-recognition aware']
+    items: ['UK GDPR', 'EU GDPR', 'CCPA', 'HIPAA-aligned workflows', 'EU AI Act / emotion-recognition aware']
   }, {
     label: 'MOVING TOWARDS',
     sub: 'progressing alignment / audits',
     items: ['SOC 2 Type II', 'ISO 27001 certification', 'ASPICE L3 formal assessment', 'Cyber Essentials Plus']
-  }, {
-    label: 'ON REQUEST',
-    sub: 'shared with procurement / security teams',
-    items: [],
-    note: 'Detailed posture and internal documentation shared under NDA.'
   }];
   return /*#__PURE__*/React.createElement("section", {
     className: "section section-alt",
@@ -267,7 +258,9 @@ const Security = () => {
     className: "sec-bucket"
   }, /*#__PURE__*/React.createElement("div", {
     className: "sec-bucket-h"
-  }, /*#__PURE__*/React.createElement(Mono, null, b.label), /*#__PURE__*/React.createElement(Mono, {
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "kicker"
+  }, b.label), /*#__PURE__*/React.createElement(Mono, {
     className: "dim"
   }, b.sub)), /*#__PURE__*/React.createElement("div", {
     className: "sec-badges"
@@ -280,12 +273,7 @@ const Security = () => {
     className: "sec-badge"
   }, /*#__PURE__*/React.createElement("span", {
     className: "sec-tick"
-  }), s))))), /*#__PURE__*/React.createElement("a", {
-    href: "https://ea1wg59mqn4.typeform.com/to/iVv585ne",
-    target: "_blank",
-    rel: "noopener",
-    className: "btn btn-ghost btn-block"
-  }, "Request our security overview \u2192")))));
+  }), s)))))))));
 };
 const CODE_SNIPPETS = {
   python: [['c-com', '# Stream multi-modal state in real-time'], ['nl'], ['c-key', 'from'], ['t', ' maaind '], ['c-key', 'import'], ['t', ' Stream, Modality'], ['nl'], ['nl'], ['t', 'stream = Stream.connect(api_key=os.environ['], ['c-str', '"MAAIND_KEY"'], ['t', '])'], ['nl'], ['t', 'stream.attach(Modality.'], ['c-fn', 'VISION'], ['t', ', source='], ['c-str', '"camera://0"'], ['t', ')'], ['nl'], ['t', 'stream.attach(Modality.'], ['c-fn', 'AUDIO'], ['t', ', source='], ['c-str', '"mic://default"'], ['t', ')'], ['nl'], ['t', 'stream.attach(Modality.'], ['c-fn', 'PPG'], ['t', ', source='], ['c-str', '"polar://h10"'], ['t', ')'], ['nl'], ['nl'], ['c-key', 'async for'], ['t', ' state '], ['c-key', 'in'], ['t', ' stream.fuse(rate='], ['c-num', '30'], ['t', '):'], ['nl'], ['t', '    '], ['c-key', 'if'], ['t', ' state.stress > '], ['c-num', '0.7'], ['t', ':'], ['nl'], ['t', '        ui.'], ['c-fn', 'soften'], ['t', '()'], ['nl'], ['t', '    '], ['c-key', 'if'], ['t', ' state.drowsy > '], ['c-num', '0.5'], ['t', ':'], ['nl'], ['t', '        cabin.'], ['c-fn', 'cool'], ['t', '(target='], ['c-num', '19'], ['t', ')'], ['nl']],
@@ -297,26 +285,312 @@ const CODE_SNIPPETS = {
   java: [['c-com', '// Stream multi-modal state in real-time'], ['nl'], ['c-key', 'import'], ['t', ' ai.maaind.Stream;'], ['nl'], ['c-key', 'import'], ['t', ' ai.maaind.Modality;'], ['nl'], ['nl'], ['t', 'Stream stream = Stream.'], ['c-fn', 'connect'], ['t', '(System.getenv('], ['c-str', '"MAAIND_KEY"'], ['t', '));'], ['nl'], ['t', 'stream.'], ['c-fn', 'attach'], ['t', '(Modality.VISION, '], ['c-str', '"camera://0"'], ['t', ');'], ['nl'], ['t', 'stream.'], ['c-fn', 'attach'], ['t', '(Modality.AUDIO,  '], ['c-str', '"mic://default"'], ['t', ');'], ['nl'], ['t', 'stream.'], ['c-fn', 'attach'], ['t', '(Modality.PPG,    '], ['c-str', '"polar://h10"'], ['t', ');'], ['nl'], ['nl'], ['t', 'stream.'], ['c-fn', 'fuse'], ['t', '('], ['c-num', '30'], ['t', ').'], ['c-fn', 'forEach'], ['t', '(state -> {'], ['nl'], ['t', '    '], ['c-key', 'if'], ['t', ' (state.stress > '], ['c-num', '0.7'], ['t', ')  ui.'], ['c-fn', 'soften'], ['t', '();'], ['nl'], ['t', '    '], ['c-key', 'if'], ['t', ' (state.drowsy > '], ['c-num', '0.5'], ['t', ') cabin.'], ['c-fn', 'cool'], ['t', '('], ['c-num', '19'], ['t', ');'], ['nl'], ['t', '});'], ['nl']]
 };
 const LANG_LABELS = ['python', 'typescript', 'swift', 'kotlin', 'java', 'rust', 'C++'];
+
+// Additional real Maaind API examples (string form + lightweight highlighter).
+const API_SNIPPETS = {
+  hrv: {
+    python: `# Heart rate in, HRV and stress out
+import requests
+
+BASE = "https://api.maaind.com/v1"
+AUTH = {"Authorization": "Token <your-token>"}
+
+# 1. Send recent mean-HR readings: [timestamp_ms, bpm]
+requests.post(f"{BASE}/send-hr/", headers=AUTH, json={
+    "device_token": "driver-01",
+    "hr_data": [[1669207020000, 71], [1669207021000, 72]],
+    "auto_compute_hrv": True,
+})
+
+# 2. Read back the predicted HRV and stress state
+r = requests.post(f"{BASE}/get-hrv/", headers=AUTH, json={
+    "device_token": "driver-01",
+    "timestamp_for_prediction_in_ms": 1669207126274,
+})
+print(r.json()["predicted_hrv"], r.json()["discrete_value"])`,
+    typescript: `// Heart rate in, HRV and stress out
+const BASE = "https://api.maaind.com/v1";
+const AUTH = { Authorization: "Token <your-token>", "Content-Type": "application/json" };
+
+// 1. Send recent mean-HR readings: [timestampMs, bpm]
+await fetch(BASE + "/send-hr/", {
+  method: "POST",
+  headers: AUTH,
+  body: JSON.stringify({
+    device_token: "driver-01",
+    hr_data: [[1669207020000, 71], [1669207021000, 72]],
+    auto_compute_hrv: true,
+  }),
+});
+
+// 2. Read back the predicted HRV and stress state
+const res = await fetch(BASE + "/get-hrv/", {
+  method: "POST",
+  headers: AUTH,
+  body: JSON.stringify({
+    device_token: "driver-01",
+    timestamp_for_prediction_in_ms: 1669207126274,
+  }),
+});
+const hrv = await res.json();
+console.log(hrv.predicted_hrv, hrv.discrete_value);`
+  },
+  ser: {
+    python: `# Speech emotion, stress + cabin sound events
+import base64, requests
+
+BASE = "https://api.maaind.com/v1"
+AUTH = {"Authorization": "Token <your-token>"}
+
+wav = base64.b64encode(open("clip.wav", "rb").read()).decode()
+r = requests.post(f"{BASE}/get-ser/", headers=AUTH, json={
+    "device_token": "driver-01",
+    "raw_audio": wav,
+    "denoise": True,
+})
+s = r.json()
+print(s["valence"], s["arousal"], s["stress_level"])
+print(s["events"]["top"])   # e.g. ["breathing"]`,
+    typescript: `// Speech emotion, stress + cabin sound events
+import { readFileSync } from "fs";
+
+const BASE = "https://api.maaind.com/v1";
+const AUTH = { Authorization: "Token <your-token>", "Content-Type": "application/json" };
+
+const wav = readFileSync("clip.wav").toString("base64");
+const res = await fetch(BASE + "/get-ser/", {
+  method: "POST",
+  headers: AUTH,
+  body: JSON.stringify({ device_token: "driver-01", raw_audio: wav, denoise: true }),
+});
+const s = await res.json();
+console.log(s.valence, s.arousal, s.stress_level);
+console.log(s.events.top);   // e.g. ["breathing"]`
+  },
+  vision: {
+    python: `# Facial emotion + contactless heart rate (rPPG) from one frame
+import base64, requests
+
+BASE = "https://api.maaind.com/v1"
+AUTH = {"Authorization": "Token <your-token>"}
+
+jpg = base64.b64encode(open("frame.jpg", "rb").read()).decode()
+r = requests.post(f"{BASE}/visual/frame/", headers=AUTH, json={
+    "session_id": "driver-01",
+    "frame": jpg,
+})
+v = r.json()
+print(v["emotion"], v["heart_rate"], v["stress"]["score"])`,
+    typescript: `// Facial emotion + contactless heart rate (rPPG) from one frame
+import { readFileSync } from "fs";
+
+const BASE = "https://api.maaind.com/v1";
+const AUTH = { Authorization: "Token <your-token>", "Content-Type": "application/json" };
+
+const jpg = readFileSync("frame.jpg").toString("base64");
+const res = await fetch(BASE + "/visual/frame/", {
+  method: "POST",
+  headers: AUTH,
+  body: JSON.stringify({ session_id: "driver-01", frame: jpg }),
+});
+const v = await res.json();
+console.log(v.emotion, v.heart_rate, v.stress.score);`
+  },
+  stt: {
+    python: `# Streaming speech-to-text - real-time, multi-language, auto language detection
+import asyncio, json, websockets
+
+URL = "wss://api.maaind.com/v1/transcribe/stream/?language=auto"
+AUTH = {"Authorization": "Token <your-token>"}
+
+async def main(mic):
+    async with websockets.connect(URL, extra_headers=AUTH) as ws:
+        async def push():
+            async for chunk in mic:        # 16 kHz PCM audio, as it arrives
+                await ws.send(chunk)
+        asyncio.create_task(push())
+        async for msg in ws:               # partials stream back live
+            seg = json.loads(msg)
+            print(seg["language"], seg["is_final"], seg["text"])
+
+asyncio.run(main(mic_stream()))`,
+    typescript: `// Streaming speech-to-text - real-time, multi-language, auto language detection
+const ws = new WebSocket(
+  "wss://api.maaind.com/v1/transcribe/stream/?language=auto&token=<your-token>"
+);
+
+ws.onmessage = (e) => {
+  const seg = JSON.parse(e.data);
+  // partials stream in live; is_final marks a closed segment
+  console.log(seg.language, seg.is_final, seg.text);
+};
+
+// push 16 kHz PCM audio chunks as they arrive from the mic
+mic.ondata = (chunk) => ws.send(chunk);`
+  },
+  attributes: {
+    python: `# Age, sex & child-presence - from voice OR vision
+import base64, requests
+
+BASE = "https://api.maaind.com/v1"
+AUTH = {"Authorization": "Token <your-token>"}
+
+# From voice: enable detailed_mode on the SER endpoint
+wav = base64.b64encode(open("clip.wav", "rb").read()).decode()
+v = requests.post(f"{BASE}/get-ser/", headers=AUTH, json={
+    "device_token": "cabin-01", "raw_audio": wav, "detailed_mode": True,
+}).json()
+print(v["voice_gender"], v["voice_age_smoothed"], v["audio_cpd_state"])
+
+# From vision: the same attributes from a camera frame
+jpg = base64.b64encode(open("frame.jpg", "rb").read()).decode()
+f = requests.post(f"{BASE}/visual/frame/", headers=AUTH, json={
+    "session_id": "cabin-01", "frame": jpg,
+}).json()
+print(f["sex"], f["age"], f["child_present"])`,
+    typescript: `// Age, sex & child-presence - from voice OR vision
+import { readFileSync } from "fs";
+
+const BASE = "https://api.maaind.com/v1";
+const AUTH = { Authorization: "Token <your-token>", "Content-Type": "application/json" };
+
+// From voice: enable detailed_mode on the SER endpoint
+const wav = readFileSync("clip.wav").toString("base64");
+const v = await (await fetch(BASE + "/get-ser/", {
+  method: "POST", headers: AUTH,
+  body: JSON.stringify({ device_token: "cabin-01", raw_audio: wav, detailed_mode: true }),
+})).json();
+console.log(v.voice_gender, v.voice_age_smoothed, v.audio_cpd_state);
+
+// From vision: the same attributes from a camera frame
+const jpg = readFileSync("frame.jpg").toString("base64");
+const f = await (await fetch(BASE + "/visual/frame/", {
+  method: "POST", headers: AUTH,
+  body: JSON.stringify({ session_id: "cabin-01", frame: jpg }),
+})).json();
+console.log(f.sex, f.age, f.child_present);`
+  },
+  dms: {
+    python: `# Driver monitoring (DMS) - gaze, head pose, posture, hands, drowsiness
+# Available in Maaind Automotive Solution
+import base64, requests
+
+BASE = "https://api.maaind.com/v1"
+AUTH = {"Authorization": "Token <your-token>"}
+
+jpg = base64.b64encode(open("frame.jpg", "rb").read()).decode()
+d = requests.post(f"{BASE}/visual/frame/", headers=AUTH, json={
+    "session_id": "driver-01",
+    "frame": jpg,
+}).json()
+print(d["eye_gaze"], d["head_pose"])         # where the eyes and head point
+print(d["eyes_open"], d["drowsiness"])       # eye state + drowsiness
+print(d["hands_on_wheel"], d["posture"])     # steering wheel + body posture`,
+    typescript: `// Driver monitoring (DMS) - gaze, head pose, posture, hands, drowsiness
+// Available in Maaind Automotive Solution
+import { readFileSync } from "fs";
+
+const BASE = "https://api.maaind.com/v1";
+const AUTH = { Authorization: "Token <your-token>", "Content-Type": "application/json" };
+
+const jpg = readFileSync("frame.jpg").toString("base64");
+const d = await (await fetch(BASE + "/visual/frame/", {
+  method: "POST", headers: AUTH,
+  body: JSON.stringify({ session_id: "driver-01", frame: jpg }),
+})).json();
+console.log(d.eye_gaze, d.head_pose);        // where the eyes and head point
+console.log(d.eyes_open, d.drowsiness);      // eye state + drowsiness
+console.log(d.hands_on_wheel, d.posture);    // steering wheel + body posture`
+  }
+};
+const API_TABS = [{
+  id: 'fusion',
+  label: 'Fusion stream',
+  desc: 'One fused state from every modality'
+}, {
+  id: 'hrv',
+  label: 'HR/HRV/Stress',
+  desc: 'Heart rate in, HRV and stress out'
+}, {
+  id: 'ser',
+  label: 'Speech emotion',
+  desc: 'Emotion, stress + sound events from audio'
+}, {
+  id: 'vision',
+  label: 'Vision',
+  desc: 'Face emotion + contactless heart rate'
+}, {
+  id: 'stt',
+  label: 'Transcription',
+  desc: 'Real-time streaming speech-to-text, multi-language with auto detection'
+}, {
+  id: 'attributes',
+  label: 'Age/Sex/Child Detection',
+  desc: 'Age, sex & child-presence, from voice or vision'
+}, {
+  id: 'dms',
+  label: 'DMS',
+  desc: 'Driver monitoring: gaze, head pose, posture, hands, drowsiness'
+}];
+
+// Lightweight highlighter: comments, double-quoted strings, numbers, keywords.
+const HL_RE = /(#.*$|\/\/.*$)|("(?:[^"\\]|\\.)*")|(\b\d+(?:\.\d+)?\b)|(\b(?:import|from|const|let|var|await|async|return|if|else|for|while|in|of|def|use|fn|auto|new|True|False|None|true|false|null)\b)/;
+function highlightCode(code) {
+  const out = [];
+  code.split('\n').forEach((line, li) => {
+    if (li > 0) out.push(['nl']);
+    let rest = line;
+    while (rest.length) {
+      const m = rest.match(HL_RE);
+      if (!m) {
+        out.push(['t', rest]);
+        break;
+      }
+      if (m.index > 0) out.push(['t', rest.slice(0, m.index)]);
+      const cls = m[1] ? 'c-com' : m[2] ? 'c-str' : m[3] ? 'c-num' : 'c-key';
+      out.push([cls, m[0]]);
+      rest = rest.slice(m.index + m[0].length);
+    }
+  });
+  return out;
+}
 const DocsTabs = () => {
+  const [api, setApi] = React.useState('fusion');
   const [lang, setLang] = React.useState('python');
-  const tokens = CODE_SNIPPETS[lang];
+  const langsForApi = api === 'fusion' ? LANG_LABELS : Object.keys(API_SNIPPETS[api]);
+  const activeLang = langsForApi.includes(lang) ? lang : langsForApi[0];
+  const tokens = api === 'fusion' ? CODE_SNIPPETS[activeLang] : highlightCode(API_SNIPPETS[api][activeLang]);
+  const activeApi = API_TABS.find(a => a.id === api);
   return /*#__PURE__*/React.createElement("div", {
     className: "docs-grid"
   }, /*#__PURE__*/React.createElement("div", {
     className: "docs-code"
   }, /*#__PURE__*/React.createElement("div", {
+    className: "code-supertabs",
+    role: "tablist",
+    "aria-label": "Maaind API"
+  }, /*#__PURE__*/React.createElement(Mono, {
+    className: "code-supertabs-label"
+  }, "API"), API_TABS.map(a => /*#__PURE__*/React.createElement("button", {
+    key: a.id,
+    type: "button",
+    role: "tab",
+    "aria-selected": a.id === api,
+    className: 'code-supertab' + (a.id === api ? ' on' : ''),
+    onClick: () => setApi(a.id)
+  }, a.label))), /*#__PURE__*/React.createElement("div", {
     className: "code-tabs",
     role: "tablist"
-  }, LANG_LABELS.map(l => /*#__PURE__*/React.createElement("button", {
+  }, langsForApi.map(l => /*#__PURE__*/React.createElement("button", {
     key: l,
     type: "button",
     role: "tab",
-    "aria-selected": l === lang,
-    className: 'code-tab' + (l === lang ? ' on' : ''),
+    "aria-selected": l === activeLang,
+    className: 'code-tab' + (l === activeLang ? ' on' : ''),
     onClick: () => setLang(l)
   }, l))), /*#__PURE__*/React.createElement("pre", {
     className: "code-block",
-    key: lang
+    key: api + activeLang
   }, tokens.map((tok, i) => {
     if (tok[0] === 'nl') return '\n';
     if (tok[0] === 't') return tok[1];
@@ -328,53 +602,53 @@ const DocsTabs = () => {
     className: "code-foot"
   }, /*#__PURE__*/React.createElement(Mono, {
     className: "dim"
-  }, "\u24D8 ONE OF OUR APIs"), /*#__PURE__*/React.createElement(Mono, {
+  }, activeApi.desc), /*#__PURE__*/React.createElement(Mono, {
     className: "dim"
-  }, "Illustrative snippet \xB7 full reference docs available on request"))), /*#__PURE__*/React.createElement("div", {
+  }, "Some example APIs / full reference docs available upon request"))), /*#__PURE__*/React.createElement("div", {
     className: "docs-side"
   }, /*#__PURE__*/React.createElement("a", {
     href: "https://ea1wg59mqn4.typeform.com/to/iVv585ne",
     target: "_blank",
     rel: "noopener",
     className: "docs-link"
-  }, /*#__PURE__*/React.createElement(Mono, {
-    className: "dim"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "kicker"
   }, "FULL DOCS"), /*#__PURE__*/React.createElement("div", {
     className: "dl-title"
-  }, "Detailed quickstart \xB7 access on request"), /*#__PURE__*/React.createElement("span", {
+  }, "Detailed quickstart / access on request"), /*#__PURE__*/React.createElement("span", {
     className: "arr"
   }, "\u2192")), /*#__PURE__*/React.createElement("a", {
     href: "https://ea1wg59mqn4.typeform.com/to/iVv585ne",
     target: "_blank",
     rel: "noopener",
     className: "docs-link"
-  }, /*#__PURE__*/React.createElement(Mono, {
-    className: "dim"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "kicker"
   }, "API REFERENCE"), /*#__PURE__*/React.createElement("div", {
     className: "dl-title"
-  }, "Complete schema \xB7 every endpoint"), /*#__PURE__*/React.createElement("span", {
+  }, "HR/HRV / SER / vision / transcription / age/sex/child / DMS / fusion"), /*#__PURE__*/React.createElement("span", {
     className: "arr"
   }, "\u2192")), /*#__PURE__*/React.createElement("a", {
     href: "https://ea1wg59mqn4.typeform.com/to/iVv585ne",
     target: "_blank",
     rel: "noopener",
     className: "docs-link"
-  }, /*#__PURE__*/React.createElement(Mono, {
-    className: "dim"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "kicker"
   }, "RECIPES"), /*#__PURE__*/React.createElement("div", {
     className: "dl-title"
-  }, "DMS \xB7 OMS \xB7 biofeedback \xB7 more"), /*#__PURE__*/React.createElement("span", {
+  }, "DMS / OMS / biofeedback / more"), /*#__PURE__*/React.createElement("span", {
     className: "arr"
   }, "\u2192")), /*#__PURE__*/React.createElement("a", {
     href: "https://ea1wg59mqn4.typeform.com/to/iVv585ne",
     target: "_blank",
     rel: "noopener",
     className: "docs-link accent"
-  }, /*#__PURE__*/React.createElement(Mono, {
-    className: "dim"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "kicker"
   }, "LIVE DEMO"), /*#__PURE__*/React.createElement("div", {
     className: "dl-title"
-  }, "Available on demand \xB7 get in touch"), /*#__PURE__*/React.createElement("span", {
+  }, "Available on demand / get in touch"), /*#__PURE__*/React.createElement("span", {
     className: "arr"
   }, "\u2192"))));
 };
@@ -389,12 +663,12 @@ const Docs = () => /*#__PURE__*/React.createElement("section", {
   title: /*#__PURE__*/React.createElement(React.Fragment, null, "Developer experience", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("span", {
     className: "grad-text"
   }, "we\u2019d want to use ourselves.")),
-  sub: /*#__PURE__*/React.createElement(React.Fragment, null, "Python and TypeScript SDKs today, with Swift, Kotlin, Java, Rust and C++ on the roadmap. We have comprehensive product documentation and a range of APIs and SDKs. The snippet below is one of our APIs, shown to illustrate some of what the platform can do. ", /*#__PURE__*/React.createElement("a", {
+  sub: /*#__PURE__*/React.createElement(React.Fragment, null, "Python and TypeScript today; Swift, Kotlin, Java, Rust and C++ on the way. Full docs, real APIs and SDKs behind them. The snippet below is one of ours, to give a feel for what the platform can do. ", /*#__PURE__*/React.createElement("a", {
     href: "https://ea1wg59mqn4.typeform.com/to/iVv585ne",
     target: "_blank",
     rel: "noopener",
     className: "link-accent"
-  }, "Get in touch"), " for full docs and a live demo.")
+  }, "Get in touch"), " for the full docs and a live demo.")
 }), /*#__PURE__*/React.createElement(DocsTabs, null)));
 const BENEFITS = [{
   n: '01',
@@ -425,15 +699,15 @@ const CTA = () => /*#__PURE__*/React.createElement("section", {
   className: "cta-card"
 }, /*#__PURE__*/React.createElement("div", {
   className: "cta-grid-bg"
-}), /*#__PURE__*/React.createElement(Mono, {
-  className: "dim"
-}, "\u23F5 READY WHEN YOU ARE"), /*#__PURE__*/React.createElement("h2", {
+}), /*#__PURE__*/React.createElement("span", {
+  className: "eyebrow-kicker"
+}, "READY WHEN YOU ARE"), /*#__PURE__*/React.createElement("h2", {
   className: "cta-title"
 }, "Bring emotional intelligence", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("span", {
   className: "grad-text"
 }, "to every product you ship.")), /*#__PURE__*/React.createElement("p", {
   className: "cta-sub"
-}, "Integration is genuinely fast. Most teams are up and running in a day with our REST API and SDKs, with no extra hardware to buy. Get an API key, talk to an engineer about your integration, or ask for our security and automotive evidence packs. We\u2019ll help you go live."), /*#__PURE__*/React.createElement("div", {
+}, "Integration is fast. Most teams are live in a day with our REST API and SDKs, no extra hardware. Get a key, talk to an engineer, or ask for our security and automotive evidence packs. We\u2019ll help you ship."), /*#__PURE__*/React.createElement("div", {
   className: "cta-actions"
 }, /*#__PURE__*/React.createElement("a", {
   href: "https://ea1wg59mqn4.typeform.com/to/O1IhNavD",
@@ -451,15 +725,15 @@ const CTA = () => /*#__PURE__*/React.createElement("section", {
   className: "cta-fineprint"
 }, /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
-}, "\u23F1 ~1 day to first integration"), /*#__PURE__*/React.createElement("span", {
+}, "~1 day to first integration"), /*#__PURE__*/React.createElement("span", {
   className: "hr-sep"
 }), /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
-}, "\uD83D\uDCDE engineer on the call \xB7 not a sales funnel"), /*#__PURE__*/React.createElement("span", {
+}, "engineer on the call / not a sales funnel"), /*#__PURE__*/React.createElement("span", {
   className: "hr-sep"
 }), /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
-}, "\uD83D\uDEE1 evidence packs ready for procurement")))));
+}, "evidence packs ready for procurement")))));
 const Footer = () => /*#__PURE__*/React.createElement("footer", {
   className: "footer"
 }, /*#__PURE__*/React.createElement("div", {
@@ -480,12 +754,12 @@ const Footer = () => /*#__PURE__*/React.createElement("footer", {
   className: "footer-locations"
 }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
-}, "EINDHOVEN \xB7 NL"), /*#__PURE__*/React.createElement("div", null, "High Tech Campus 6A")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Mono, {
+}, "EINDHOVEN / NL"), /*#__PURE__*/React.createElement("div", null, "High Tech Campus 6A")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
-}, "LONDON \xB7 UK"), /*#__PURE__*/React.createElement("div", null, "70 White Lion St, N1 9PP")))), /*#__PURE__*/React.createElement("div", {
+}, "LONDON / UK"), /*#__PURE__*/React.createElement("div", null, "70 White Lion St, N1 9PP")))), /*#__PURE__*/React.createElement("div", {
   className: "footer-cols"
-}, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Mono, {
-  className: "dim"
+}, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", {
+  className: "kicker"
 }, "PLATFORM"), /*#__PURE__*/React.createElement("a", {
   href: "#"
 }, "Fusion engine"), /*#__PURE__*/React.createElement("a", {
@@ -494,8 +768,8 @@ const Footer = () => /*#__PURE__*/React.createElement("footer", {
   href: "#"
 }, "Vision"), /*#__PURE__*/React.createElement("a", {
   href: "#"
-}, "Cardiac")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Mono, {
-  className: "dim"
+}, "Cardiac")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", {
+  className: "kicker"
 }, "DEPLOY"), /*#__PURE__*/React.createElement("a", {
   href: "#"
 }, "Cloud"), /*#__PURE__*/React.createElement("a", {
@@ -504,8 +778,8 @@ const Footer = () => /*#__PURE__*/React.createElement("footer", {
   href: "#"
 }, "Automotive"), /*#__PURE__*/React.createElement("a", {
   href: "#"
-}, "On-prem")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Mono, {
-  className: "dim"
+}, "On-prem")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", {
+  className: "kicker"
 }, "DEVELOPERS"), /*#__PURE__*/React.createElement("a", {
   href: "#"
 }, "Quickstart"), /*#__PURE__*/React.createElement("a", {
@@ -514,8 +788,8 @@ const Footer = () => /*#__PURE__*/React.createElement("footer", {
   href: "#"
 }, "SDKs"), /*#__PURE__*/React.createElement("a", {
   href: "#"
-}, "Recipes")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Mono, {
-  className: "dim"
+}, "Recipes")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", {
+  className: "kicker"
 }, "COMPANY"), /*#__PURE__*/React.createElement("a", {
   href: "#"
 }, "About"), /*#__PURE__*/React.createElement("a", {
@@ -528,9 +802,9 @@ const Footer = () => /*#__PURE__*/React.createElement("footer", {
   className: "footer-bot"
 }, /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
-}, "\xA9 2026 Maaind Technologies B.V. \xB7 Eindhoven \xB7 London"), /*#__PURE__*/React.createElement(Mono, {
+}, "\xA9 2026 Maaind Technologies B.V. / Eindhoven / London"), /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
-}, "R&D across NL \xB7 UK \xB7 AT \xB7 US"))));
+}, "R&D across NL / UK / AT / US"))));
 Object.assign(window, {
   Automotive,
   Wearables,

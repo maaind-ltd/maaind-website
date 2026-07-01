@@ -25,11 +25,9 @@ const Eyebrow = ({
 }) => /*#__PURE__*/React.createElement("div", {
   className: "eyebrow"
 }, /*#__PURE__*/React.createElement("span", {
-  className: "mono dim"
-}, String(idx).padStart(2, '0')), /*#__PURE__*/React.createElement("span", {
-  className: "eyebrow-line"
+  className: "eyebrow-bar"
 }), /*#__PURE__*/React.createElement("span", {
-  className: "mono"
+  className: "eyebrow-kicker"
 }, label));
 const SectionHeader = ({
   idx,
