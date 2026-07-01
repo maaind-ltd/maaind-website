@@ -171,14 +171,23 @@ const Fusion = () => {
     viewBox: "0 0 200 500",
     preserveAspectRatio: "none"
   }, [0.1, 0.3, 0.5, 0.7, 0.9].map((y, i) => /*#__PURE__*/React.createElement("path", {
-    key: i,
-    d: `M 0 ${y * 500} C 70 ${y * 500}, 130 250, 200 250`,
+    key: 'in' + i,
+    d: `M 0 ${y * 500} C 55 ${y * 500}, 80 250, 100 250`,
     fill: "none",
-    stroke: active === i ? 'var(--accent)' : 'rgba(255,255,255,0.08)',
-    strokeWidth: active === i ? 1.5 : 1,
+    stroke: active === i ? 'var(--accent)' : 'var(--line-2)',
+    strokeWidth: active === i ? 2 : 1.25,
+    vectorEffect: "non-scaling-stroke",
     style: {
       transition: 'all 200ms'
     }
+  })), [150, 250, 350].map((y, i) => /*#__PURE__*/React.createElement("path", {
+    key: 'out' + i,
+    d: `M 100 250 C 120 250, 145 ${y}, 200 ${y}`,
+    fill: "none",
+    stroke: "var(--accent)",
+    strokeWidth: 1.5,
+    strokeOpacity: 0.55,
+    vectorEffect: "non-scaling-stroke"
   }))), /*#__PURE__*/React.createElement("div", {
     className: "fusion-core-box"
   }, /*#__PURE__*/React.createElement(Mono, {

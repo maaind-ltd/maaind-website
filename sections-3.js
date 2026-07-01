@@ -29,7 +29,7 @@ const Automotive = () => /*#__PURE__*/React.createElement("section", {
 }, [{
   x: 22,
   y: 38,
-  label: 'driver',
+  label: 'person_01',
   state: 'attentive',
   stress: 0.18,
   img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=240&h=240&fit=crop&crop=faces',
@@ -37,7 +37,7 @@ const Automotive = () => /*#__PURE__*/React.createElement("section", {
 }, {
   x: 64,
   y: 38,
-  label: 'passenger',
+  label: 'person_02',
   state: 'relaxed',
   stress: 0.12,
   img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=240&h=240&fit=crop&crop=faces',
@@ -45,7 +45,7 @@ const Automotive = () => /*#__PURE__*/React.createElement("section", {
 }, {
   x: 22,
   y: 70,
-  label: 'rear_L',
+  label: 'person_03',
   state: 'drowsy',
   stress: 0.42,
   img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=240&h=240&fit=crop&crop=faces',
@@ -53,7 +53,7 @@ const Automotive = () => /*#__PURE__*/React.createElement("section", {
 }, {
   x: 64,
   y: 70,
-  label: 'rear_R',
+  label: 'person_04',
   state: 'engaged',
   stress: 0.22,
   img: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=240&h=240&fit=crop&crop=faces',
@@ -116,13 +116,13 @@ const Automotive = () => /*#__PURE__*/React.createElement("section", {
   className: "hud-item"
 }, /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
-}, "CABIN STATE"), /*#__PURE__*/React.createElement(Mono, null, "3 attentive / 1 drowsy")), /*#__PURE__*/React.createElement("div", {
+}, "MULTI-PERSON"), /*#__PURE__*/React.createElement(Mono, null, "face + posture / real-time")), /*#__PURE__*/React.createElement("div", {
   className: "hud-item"
 }, /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
-}, "ACTION"), /*#__PURE__*/React.createElement(Mono, {
+}, "TRACKING"), /*#__PURE__*/React.createElement(Mono, {
   className: "accent-text"
-}, "\u2192 rear ventilation +")), /*#__PURE__*/React.createElement("div", {
+}, "4 people / per-person state")), /*#__PURE__*/React.createElement("div", {
   className: "hud-item"
 }, /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
