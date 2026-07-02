@@ -136,7 +136,7 @@ const Automotive = () => /*#__PURE__*/React.createElement("section", {
   className: "auto-feature"
 }, /*#__PURE__*/React.createElement("span", {
   className: "kicker"
-}, "COMFORT"), /*#__PURE__*/React.createElement("h4", null, "Occupant wellbeing (OMS)"), /*#__PURE__*/React.createElement("p", null, "Per-seat stress, mood and engagement, enough for the car to tune climate, audio and ambient lighting to whoever is actually sitting there."), /*#__PURE__*/React.createElement("p", {
+}, "COMFORT"), /*#__PURE__*/React.createElement("h4", null, "Occupant wellbeing (OMS)"), /*#__PURE__*/React.createElement("p", null, "Per-seat stress, mood and engagement, enough for the car to tune climate, audio and ambient lighting to whoever is in the seat."), /*#__PURE__*/React.createElement("p", {
   style: {
     marginTop: 8,
     fontSize: 12,

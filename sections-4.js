@@ -7,14 +7,14 @@ const BENEFITS_X = [{
   t: 'Affective AI, out of the box',
   d: 'A single API for emotion, stress, focus, fatigue, drowsiness and engagement. Calibrated, continuous and ready to ship.',
   eyebrow: 'PLATFORM',
-  long: 'Drop one REST and SDK surface into your stack and you have a continuous, calibrated read of human state: emotion, arousal, valence, stress, focus, fatigue, drowsiness and engagement. It is multimodal under the hood, picks its own models, and answers in 100 ms or less on supported hardware. No labelled-data project before you can start.',
+  long: 'Drop one REST and SDK surface into your stack and you have a continuous, calibrated read of human state: emotion, arousal, valence, stress, focus, fatigue, drowsiness and engagement. It’s multimodal under the hood, picks its own models, and answers in 100 ms or less on supported hardware. No labelled-data project before you can start.',
   points: [['8 calibrated outputs', 'arousal, valence, stress, focus, fatigue, drowsiness, engagement, emotion'], ['One model, one API', 'identical surface across cloud, on-prem and on-device'], ['Integrate in a day', 'drop-in REST + SDKs, no extra hardware, runnable recipes']]
 }, {
   n: '02',
   t: 'Smarter voice AI & agents',
-  d: 'Give your assistant, IVR, copilot or LLM agent a sense of how the user actually feels, and let it respond accordingly.',
+  d: 'Give your assistant, IVR, copilot or LLM agent a sense of how the user is feeling, and let it respond accordingly.',
   eyebrow: 'AGENTS / VOICE AI',
-  long: 'Most LLMs and voice stacks are deaf to how the person actually feels. Maaind layers a real-time read of arousal, valence, stress and frustration over any agent, whether that is a voice copilot, an IVR, an in-cabin assistant or a customer-care bot. Agents that hear tone, not just transcripts, and answer accordingly.',
+  long: 'Most LLMs and voice stacks are deaf to tone. Maaind layers a real-time read of arousal, valence, stress and frustration over any agent, whether that is a voice copilot, an IVR, an in-cabin assistant or a customer-care bot. Agents that hear tone, not just transcripts, and answer accordingly.',
   points: [['Tone-aware turn-taking', 'stop interrupting the frustrated caller, slow down for the overloaded one'], ['Sentiment-routed IVR', 'escalate angry or distressed users to a human, automatically'], ['LLM context-on-tap', 'feed state into your prompt loop as plain JSON or function-tool calls']]
 }, {
   n: '03',
@@ -35,7 +35,7 @@ const BENEFITS_X = [{
   t: 'Understand your users, deeply',
   d: 'A continuous read of emotion, psychology and state, for product analytics, research, safety and personalisation.',
   eyebrow: 'INSIGHTS / RESEARCH',
-  long: 'A continuous, multimodal read of what your users actually feel as they use your product. Not post-hoc surveys, not sentiment-guessing on text, but a calibrated, time-aligned signal. Built for product analytics teams, user-research labs, safety teams and personalisation engines.',
+  long: 'A continuous, multimodal read of what your users feel as they use your product. Not post-hoc surveys, not sentiment-guessing on text, but a calibrated, time-aligned signal. Built for product analytics teams, user-research labs, safety teams and personalisation engines.',
   points: [['Time-aligned with telemetry', 'fuse psychological state with your existing product events'], ['Cohorts & segments', 'per-user baselines so deltas are meaningful, not noise'], ['Safety & personalisation', 'flag distress, surface the right content, adapt difficulty']]
 }];
 const WhyIntegrate = () => {

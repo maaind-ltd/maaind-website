@@ -418,7 +418,7 @@ const Hero = () => /*#__PURE__*/React.createElement("section", {
   className: "grad-text"
 }, "psychophysiology"), " platform", /*#__PURE__*/React.createElement("br", null), "on the market."), /*#__PURE__*/React.createElement("p", {
   className: "hero-sub"
-}, "Maaind brings vision, voice and the heart into one live, calibrated read of how a person actually feels: emotion, stress, focus, fatigue, drowsiness and engagement. The same engine runs in the cloud or fully on-device, even offline, and is already working across multiple verticals."), /*#__PURE__*/React.createElement("div", {
+}, "We make voice agents and multimodal AI systems more capable and human-aligned. Maaind starts with the voice, then brings in vision and the heart for one live, calibrated read of how a person actually feels: emotion, stress, focus, fatigue, drowsiness and engagement. The same engine runs in the cloud or fully on-device, even offline, and is already working across multiple verticals."), /*#__PURE__*/React.createElement("div", {
   className: "hero-cta"
 }, /*#__PURE__*/React.createElement("a", {
   href: "https://ea1wg59mqn4.typeform.com/to/O1IhNavD",
@@ -457,6 +457,42 @@ const Hero = () => /*#__PURE__*/React.createElement("section", {
 }), /*#__PURE__*/React.createElement(Mono, null, "LIVE"))), /*#__PURE__*/React.createElement("div", {
   className: "viz-body"
 }, /*#__PURE__*/React.createElement("div", {
+  className: "viz-col"
+}, /*#__PURE__*/React.createElement("div", {
+  className: "viz-card"
+}, /*#__PURE__*/React.createElement("div", {
+  className: "viz-card-h"
+}, /*#__PURE__*/React.createElement(Mono, null, "VOICE / MULTI-SPEAKER"), /*#__PURE__*/React.createElement(Mono, {
+  className: "dim"
+}, "noise-robust")), /*#__PURE__*/React.createElement("div", {
+  style: {
+    padding: '14px 14px 6px'
+  }
+}, /*#__PURE__*/React.createElement(Waveform, {
+  height: 70,
+  bars: 56
+})), /*#__PURE__*/React.createElement("div", {
+  className: "speech-tags"
+}, /*#__PURE__*/React.createElement("span", {
+  className: "chip"
+}, "speaker / S2"), /*#__PURE__*/React.createElement("span", {
+  className: "chip"
+}, "lang / en-GB"), /*#__PURE__*/React.createElement("span", {
+  className: "chip"
+}, "stress / low"), /*#__PURE__*/React.createElement("span", {
+  className: "chip"
+}, "valence / +0.41"), /*#__PURE__*/React.createElement("span", {
+  className: "chip accent"
+}, "SNR / \u22126 dB \u2713"))), /*#__PURE__*/React.createElement("div", {
+  className: "viz-card mini"
+}, /*#__PURE__*/React.createElement("div", {
+  className: "viz-card-h"
+}, /*#__PURE__*/React.createElement(Mono, null, "HRV / RMSSD"), /*#__PURE__*/React.createElement(Mono, {
+  className: "dim"
+}, "42 ms")), /*#__PURE__*/React.createElement(HRTrace, {
+  width: 520,
+  height: 64
+}))), /*#__PURE__*/React.createElement("div", {
   className: "viz-col"
 }, /*#__PURE__*/React.createElement("div", {
   className: "viz-card"
@@ -509,42 +545,6 @@ const Hero = () => /*#__PURE__*/React.createElement("section", {
 }, /*#__PURE__*/React.createElement(Mono, {
   className: "dim"
 }, "DROWSY"), /*#__PURE__*/React.createElement(Mono, null, "0.07"))))), /*#__PURE__*/React.createElement("div", {
-  className: "viz-card mini"
-}, /*#__PURE__*/React.createElement("div", {
-  className: "viz-card-h"
-}, /*#__PURE__*/React.createElement(Mono, null, "HRV / RMSSD"), /*#__PURE__*/React.createElement(Mono, {
-  className: "dim"
-}, "42 ms")), /*#__PURE__*/React.createElement(HRTrace, {
-  width: 520,
-  height: 64
-}))), /*#__PURE__*/React.createElement("div", {
-  className: "viz-col"
-}, /*#__PURE__*/React.createElement("div", {
-  className: "viz-card"
-}, /*#__PURE__*/React.createElement("div", {
-  className: "viz-card-h"
-}, /*#__PURE__*/React.createElement(Mono, null, "VOICE / MULTI-SPEAKER"), /*#__PURE__*/React.createElement(Mono, {
-  className: "dim"
-}, "noise-robust")), /*#__PURE__*/React.createElement("div", {
-  style: {
-    padding: '14px 14px 6px'
-  }
-}, /*#__PURE__*/React.createElement(Waveform, {
-  height: 70,
-  bars: 56
-})), /*#__PURE__*/React.createElement("div", {
-  className: "speech-tags"
-}, /*#__PURE__*/React.createElement("span", {
-  className: "chip"
-}, "speaker / S2"), /*#__PURE__*/React.createElement("span", {
-  className: "chip"
-}, "lang / en-GB"), /*#__PURE__*/React.createElement("span", {
-  className: "chip"
-}, "stress / low"), /*#__PURE__*/React.createElement("span", {
-  className: "chip"
-}, "valence / +0.41"), /*#__PURE__*/React.createElement("span", {
-  className: "chip accent"
-}, "SNR / \u22126 dB \u2713"))), /*#__PURE__*/React.createElement("div", {
   className: "viz-card"
 }, /*#__PURE__*/React.createElement("div", {
   className: "viz-card-h"

@@ -4,12 +4,12 @@
 const CAPS = [{
   n: '01',
   t: 'One read of the whole person',
-  d: 'Vision, voice and the heart, fused into one continuous read of how someone is genuinely doing. Emotion and stress first, then focus, fatigue, drowsiness and engagement. Plenty of teams do one signal well. Putting them all together is the hard part, and it is the part we built.',
+  d: 'Voice first, then vision and the heart, fused into one continuous read of how someone is really doing. Emotion and stress first, then focus, fatigue, drowsiness and engagement. Plenty of teams do one signal well. Fusing them is the hard part, and that’s what we built.',
   tag: 'PLATFORM'
 }, {
   n: '02',
   t: 'Runs on the edge, no cloud needed',
-  d: 'The whole engine fits on a single box in the vehicle and runs fully offline. An air-gapped car behaves exactly like a connected one, because nothing ever phones home. Prefer the cloud instead? Same model, same API, your call.',
+  d: 'The whole engine fits on a single box in the vehicle and runs fully offline. An air-gapped car behaves exactly like a connected one. Nothing phones home. Prefer the cloud instead? Same model, same API, your call.',
   tag: 'EDGE'
 }, {
   n: '03',
@@ -39,7 +39,7 @@ const CAPS = [{
 }, {
   n: '08',
   t: 'We will tune it to you',
-  d: 'Bring your data, your vertical and your hardware target, and our team fine-tunes and distils the model with you, usually in days rather than quarters. It is a service we run alongside you, not a docs page we point you at.',
+  d: 'Bring your data, your vertical and your hardware target, and our team fine-tunes and distils the model with you, usually in days, not quarters. It’s a service we run with you, not a docs page we point you at.',
   tag: 'SERVICE'
 }, {
   n: '09',
@@ -49,7 +49,7 @@ const CAPS = [{
 }, {
   n: '10',
   t: 'Clean IP, privacy built in',
-  d: 'New models ship under permissive Apache-2.0, MIT and BSD licences with documented provenance, so the IP holds up when an acquirer runs diligence. Per-occupant consent, a right-to-erasure that genuinely wipes the biometrics, and full audit logs are all there from day one.',
+  d: 'New models ship under permissive Apache-2.0, MIT and BSD licences with documented provenance, so the IP holds up when an acquirer runs diligence. Per-occupant consent, a right-to-erasure that really does wipe the biometrics, and full audit logs are all there from day one.',
   tag: 'TRUST'
 }];
 const Capabilities = () => /*#__PURE__*/React.createElement("section", {
@@ -119,11 +119,11 @@ const Fusion = () => {
     return () => clearInterval(id);
   }, []);
   const inputs = [{
-    k: 'VISION',
-    items: ['face_emotion + stress', 'gaze + eye_state', 'head_pose', 'drowsiness + yawns', 'body + hands']
-  }, {
     k: 'VOICE',
     items: ['speech_emotion + stress', 'arousal / valence', 'speaker_id', 'adult / child', 'sound_events']
+  }, {
+    k: 'VISION',
+    items: ['face_emotion + stress', 'gaze + eye_state', 'head_pose', 'drowsiness + yawns', 'body + hands']
   }, {
     k: 'CARDIAC + WEARABLE',
     items: ['heart_rate in → HRV + stress out', 'PPG / rPPG (camera) / radar', 'respiration', 'Apple / Google / Polar', 'and all major COTS wearables']
@@ -159,7 +159,7 @@ const Fusion = () => {
     className: "signal-dot"
   }), /*#__PURE__*/React.createElement(Mono, null, g.k), /*#__PURE__*/React.createElement(Mono, {
     className: "dim"
-  }, i === 0 ? 'works with any FPS' : i === 1 ? 'works with almost any voice input' : i === 2 ? 'at highest resolution possible' : i === 3 ? 'at highest hardware-capable resolution' : 'continuous')), /*#__PURE__*/React.createElement("div", {
+  }, i === 0 ? 'works with almost any voice input' : i === 1 ? 'works with any FPS' : i === 2 ? 'at highest resolution possible' : i === 3 ? 'at highest hardware-capable resolution' : 'continuous')), /*#__PURE__*/React.createElement("div", {
     className: "fusion-input-list"
   }, g.items.map(it => /*#__PURE__*/React.createElement("span", {
     key: it,
