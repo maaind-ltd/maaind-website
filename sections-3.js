@@ -749,7 +749,10 @@ const Footer = () => /*#__PURE__*/React.createElement("footer", {
 }, /*#__PURE__*/React.createElement("img", {
   src: "maaind_logo.png",
   alt: "Maaind",
-  className: "logo-img logo-img-footer"
+  className: "logo-img logo-img-footer",
+  decoding: "async",
+  width: "1000",
+  height: "227"
 })), /*#__PURE__*/React.createElement("p", null, "Multimodal psychophysiology, fused and calibrated, deployable in the cloud or fully on-device."), /*#__PURE__*/React.createElement("div", {
   className: "footer-locations"
 }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Mono, {

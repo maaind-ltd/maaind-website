@@ -367,7 +367,10 @@ const Nav = () => {
   }, /*#__PURE__*/React.createElement("img", {
     src: "maaind_logo.png",
     alt: "Maaind",
-    className: "logo-img"
+    className: "logo-img",
+    decoding: "async",
+    width: "1000",
+    height: "227"
   })), /*#__PURE__*/React.createElement(ThemeSwitch, null)), /*#__PURE__*/React.createElement("div", {
     className: "nav-links"
   }, /*#__PURE__*/React.createElement("a", {
@@ -503,9 +506,13 @@ const Hero = () => /*#__PURE__*/React.createElement("section", {
 }, "live")), /*#__PURE__*/React.createElement("div", {
   className: "cv-stage cv-stage-photo"
 }, /*#__PURE__*/React.createElement("img", {
-  src: "hero-face.png",
+  src: "hero-face.webp",
   className: "cv-photo",
-  alt: ""
+  alt: "",
+  loading: "lazy",
+  decoding: "async",
+  width: "1226",
+  height: "1126"
 }), /*#__PURE__*/React.createElement("div", {
   className: "cv-photo-tint"
 }), /*#__PURE__*/React.createElement("div", {
